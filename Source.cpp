@@ -27,7 +27,7 @@ int main()
     }
     cout << "Amount of numbers = " << sumbols << endl;
     cout << "Sum = " << sum << endl;
-    cout << "Arithmetic mean = " << (double)sum / n << endl;
+    cout << "Arithmetic mean = " << (double)sum / sumbols << endl;
 
     system("pause");
     return 0;
