@@ -147,9 +147,5 @@ int main()
 		cin >> n1;
 		cout << Proverka(n1);
 	}break;
-	case 7:
-	{
-
-	}
 	}
 }
