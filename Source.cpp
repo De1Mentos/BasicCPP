@@ -6,10 +6,14 @@
 #include<conio.h>
 #include <ctime>
 using namespace std;
-int row, line, m1, m2, m3, m4, m5, m6;
+int row, line, n1, n2;
 long max, min;
+int c;
+int d;
+int sum;
+double cube;
 
-void Kvadrat(row, line)
+double Kvadrat(int row, int line)
 {
 	for (size_t i = 0; i < row; i++)
 	{
@@ -19,9 +23,67 @@ void Kvadrat(row, line)
 		}
 		cout << endl;
 	}
-
+	return 0;
 }
 
+double Factorial(int n1)
+{
+	const uint32_t size = c;
+	for (size_t i = n1; i > 0; i--)
+	{
+		sum += i * (i - 1);
+	}
+
+	return sum;
+}
+
+double Proste(double n1)
+{
+	if (n1 / n1 == 1 || n1 / 1 == n1)
+	{
+		cout << "this number is PROSTE" << endl;
+		return 1;
+	}
+	else
+	{
+		cout << "this number is not PROSTE";
+		return 0;
+	}
+}
+
+double Cube(double n1)
+{
+	cube = 3;
+	sum = pow(n1, cube);
+	return sum;
+}
+
+double Bigger(double n1, double n2)
+{
+	if (n1 > n2)
+	{
+		cout << n1 << " Is bigger than " << n2 << endl;
+		return 1;
+	}
+	else
+	{
+		cout << n2 << " Is bigger than " << n1 << endl;
+		return 0;
+	}
+}
+double Proverka(double n1)
+{
+	if (n1 > 0)
+	{
+		cout << "TRUTH" << endl;
+		return 1;
+	}
+	else
+	{
+		cout << "FALSE" << endl;
+		return 0;
+	}
+}
 int main()
 {
 
@@ -51,9 +113,43 @@ int main()
 		cin >> row;
 		cout << "wide --> ";
 		cin >> line;
+		cout << Kvadrat(row, line);
 	}break;
 	case 2:
 	{
+		cout << "number -->";
+		cin >> n1;
+		cout << Factorial(n1);
 	}break;
+	case 3:
+	{
+		cout << "number -->";
+		cin >> n1;
+		cout << Proste(n1);
+	}break;
+	case 4:
+	{
+		cout << "number -->";
+		cin >> n1;
+		cout << Cube(n1);
+	}break;
+	case 5:
+	{
+		cout << "number 1 -->";
+		cin >> n1;
+		cout << "number 2 -->";
+		cin >> n2;
+		cout << Bigger(n1, n2);
+	}break;
+	case 6:
+	{
+		cout << "number -->";
+		cin >> n1;
+		cout << Proverka(n1);
+	}break;
+	case 7:
+	{
+
+	}
 	}
 }
