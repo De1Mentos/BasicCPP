@@ -8,114 +8,57 @@
 #include <ctime>
 	using namespace std;
 
-	int* Biggest(int* x, int* y)
-	{
-		if (*x < *y)
-		{
-			return y;
-		}
-		else
-		{
-			return x;
-		}
-	}
-
-	int* Changer(int* x, int* y, int* a)
-	{
-		a = x;
-		x = y;
-		y = a;
-		cout << "\nNumbers changed; 1 = " << *x << "; 2 = " << *y << endl << endl;
-		return 0;
-	}
-
-	int* Plus(int* x, int* y)
-	{
-		return y + *x;
-	}
-	int* Minus(int *x, int *y)
-	{
-		return y - *x;
-	}
-	int* Divide(int* x, int* y)
-	{
-		return y;
-	}
-	int* Multiply(int* x, int* y)
-	{
-		return y;
-	}
 	int main()
 	{
+		int clients, price;
+		cout << "How many ñlients do you have? - ";
+		cin >> clients;
+		int arr[10000], seek;
 		int Zadacha;
-
-		cout << "\t\t#------------------#" << endl;
-		cout << "\t\t|     THE MENU     |" << endl;
-		cout << "\t\t#------------------#" << endl;
-		cout << "\t\t| 1= ZADACHA 1     |" << endl;
-		cout << "\t\t| 2= ZADACHA 2     |" << endl;
-		cout << "\t\t| 3= ZADACHA 3     |" << endl;
-		cout << "\t\t| 4= ZADACHA 4     |" << endl;
-		cout << "\t\t| 5= ZADACHA 5     |" << endl;
-		cout << "\t\t| 6= ZADACHA 6     |" << endl;
-		cout << "\t\t#------------------#" << endl;
-		cout << "\t\t| 0= CLOSE         |" << endl;
-		cout << "\t\t#------------------#" << endl;
-		cout << "" << endl;
-		cout << "Write what zadacha to show -->";
-		cin >> Zadacha;
-		system("cls");
-		switch (Zadacha)
+		for (size_t i = 0; i < clients; i++)
 		{
-		case 1:
+			cout << "How much client " << i << " have to pay? ";
+			cin >> arr[i]; cout << endl;
+		}
+		do
 		{
-			int* x = new int{}; int* y = new int {};
-			cout << "\nNumber 1 - "; 
-			cin >> *x;
-			cout << "\nNumber 2 - "; 
-			cin >> *y;
-			cout << *Biggest(x, y) << " Is the biggest number";
-		}break;
-		case 2:
-		{
-
-		}break;
-		case 3:
-		{
-			int* x = new int{}; int* y = new int{}; int* a = new int{0};
-			cout << "\nNumber 1 - ";
-			cin >> *x;
-			cout << "\nNumber 2 - ";
-			cin >> *y;
-			*Changer(x, y, a);
-		}break;
-		case 4:
-		{
-			int pick;
-			int* x = new int{}; int* y = new int{};
-			cout << "\nNumber 1 - ";
-			cin >> *x;
-			cout << "\nNumber 2 - ";
-			cin >> *y;
-			cout << "1 - Plus, 2 - Minus, 3 - Divide, 4 - multiply";
-			cin >> pick;
-			if (pick == 1)
+			cout << "What thing do you want to check?" << endl;
+			cout << "1 - Check clients per packed price" << endl;
+			cout << "2 - Check all the clients and their pay" << endl;
+			cout << "3 - Check how much you made" << endl;
+			cout << "(Author commentary - This is the best how I could understand Exercise you gave us, please don't judge me)";
+			cin >> Zadacha;
+			switch (Zadacha)
 			{
-				cout << *Plus(x, y);
-			}
-			else if (pick == 2)
+			case 1:
 			{
-				cout << *Minus;
-			}
-			else if (pick == 3)
+				cout << "Price of packet - " << endl;
+				cin >> seek;
+				for (size_t i = 0; i < clients; i++)
+				{
+					if (arr[i] == seek)
+					{
+						cout << "Client " << i << " have paid" << arr[i] << endl;
+					}
+				}
+			}break;
+			case 2:
 			{
-				cout << *Divide;
-			}
-			else if (pick == 4)
+				for (size_t i = 0; i < clients; i++)
+				{
+					cout << "Client " << i << " have to pay " << arr[i] << endl;
+				}
+				Sleep(500);
+			}break;
+			case 3:
 			{
-				cout << *Multiply;
-			}
-		}break;
-
-		};
+				int sum = 0;
+				for (size_t i = 0; i < clients; i++)
+				{
+					sum += arr[i];
+				}
+				cout << "All the clients made " << sum << endl;
+			}break;
+			};
+		} while (Zadacha != 0);
 	}
