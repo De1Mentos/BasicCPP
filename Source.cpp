@@ -8,6 +8,11 @@
 #include <ctime>
 	using namespace std;
 
+	void Plus(int* x, int* y, int* tmp);
+	void Minus(int* x, int* y, int* tmp);
+	void Multiply(int* x, int* y, int* tmp);
+	void Divide(int* x, int* y, int* tmp);
+
 	int* Biggest(int* x, int* y)
 	{
 		if (*x < *y)
@@ -20,30 +25,47 @@
 		}
 	}
 
+	void* Digiter (int &digite)
+	{
+		if (digite < 0)
+		{
+			cout << "NEGATIVE";
+		}
+		else if (digite > 0)
+		{
+			cout << "POSITIVE";
+		}
+		if (digite == 0)
+		{
+			cout << "ZERO";
+		}
+		cout << endl;cout << endl; return 0;
+		
+	}
 	int* Changer(int* x, int* y, int* a)
 	{
 		a = x;
 		x = y;
 		y = a;
-		cout << "\nNumbers changed; 1 = " << *x << "; 2 = " << *y << endl << endl;
+		cout << "\nNumbers changed; 1 = " << &x << "; 2 = " << &y << endl << endl;
 		return 0;
 	}
 
-	int* Plus(int* x, int* y)
+    void Plus(int* x, int* y, int* tmp)
 	{
-		return y + *x;
+		*tmp = *x + *y;
 	}
-	int* Minus(int *x, int *y)
+	void Minus(int* x, int* y, int* tmp)
 	{
-		return y - *x;
+		*tmp = *y - *x;
 	}
-	int* Divide(int* x, int* y)
+	void Divide(int* x, int* y, int* tmp)
 	{
-		return y;
+		*tmp = *y / *x;
 	}
-	int* Multiply(int* x, int* y)
+	void Multiply(int* x, int* y, int* tmp)
 	{
-		return y;
+		*tmp = *y * *x;
 	}
 	int main()
 	{
@@ -78,7 +100,10 @@
 		}break;
 		case 2:
 		{
-
+			int* digite = new int{};
+			cout << "Enter digit:";
+			cin >> *digite;
+			Digiter(*digite);
 		}break;
 		case 3:
 		{
@@ -87,33 +112,42 @@
 			cin >> *x;
 			cout << "\nNumber 2 - ";
 			cin >> *y;
-			*Changer(x, y, a);
+			cout << "\nNumber 1 is " << y << " Number 2 is " << x;
+			Changer(x, y, a);
 		}break;
 		case 4:
 		{
-			int pick;
-			int* x = new int{}; int* y = new int{};
+			int pick, res;
+			int x; int y;
 			cout << "\nNumber 1 - ";
-			cin >> *x;
+			cin >> y;
 			cout << "\nNumber 2 - ";
-			cin >> *y;
-			cout << "1 - Plus, 2 - Minus, 3 - Divide, 4 - multiply";
+			cin >> x;
+			cout << "1 - Plus, 2 - Minus, 3 - Divide, 4 - Multiply";
 			cin >> pick;
 			if (pick == 1)
 			{
-				cout << *Plus(x, y);
+				Plus(&x, &y, &res);
+				cout << res << "\n";
+				break;
 			}
 			else if (pick == 2)
 			{
-				cout << *Minus;
+				Minus(&x, &y, &res);
+				cout << res << "\n";
+				break;
 			}
 			else if (pick == 3)
 			{
-				cout << *Divide;
+				Divide(&x, &y, &res);
+				cout << res << "\n";
+				break;
 			}
 			else if (pick == 4)
 			{
-				cout << *Multiply;
+				Multiply(&x, &y, &res);
+				cout << res << "\n";
+				break;
 			}
 		}break;
 
