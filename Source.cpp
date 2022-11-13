@@ -13,9 +13,6 @@ int main()
 	cout << "\t\t| 1= ZADACHA 1     |" << endl;
 	cout << "\t\t| 2= ZADACHA 2     |" << endl;
 	cout << "\t\t| 3= ZADACHA 3     |" << endl;
-	cout << "\t\t| 4= ZADACHA 4     |" << endl;
-	cout << "\t\t| 5= ZADACHA 5     |" << endl;
-	cout << "\t\t| 6= ZADACHA 6     |" << endl;
 	cout << "\t\t#------------------#" << endl;
 	cout << "\t\t| 0= CLOSE         |" << endl;
 	cout << "\t\t#------------------#" << endl;
