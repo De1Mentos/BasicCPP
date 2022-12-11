@@ -23,6 +23,12 @@ char* mystrcpy(char* str1, const char* str2)
 	return str1;
 }
 
+char* mystrplus(char* str1, const char* str2)
+{
+
+}
+
+
 int main()
 {
 	int Zadacha;
@@ -35,6 +41,8 @@ int main()
 	cout << "\t\t| 3= ZADACHA 3     |" << endl;
 	cout << "\t\t| 4= ZADACHA 4     |" << endl;
 	cout << "\t\t| 5= ZADACHA 5     |" << endl;
+	cout << "\t\t#------------------#" << endl;
+	cout << "\t\t| 6= ZADACHA 6     |" << endl;
 	cout << "\t\t#------------------#" << endl;
 	cout << "\t\t| 0= CLOSE         |" << endl;
 	cout << "\t\t#------------------#" << endl;
@@ -63,12 +71,24 @@ int main()
 	}break;
 	case 3:
 	{
+		char* str1 = new char [7] {"Orange"};
+		char* str2 = new char [6] {"Juice"};
+		cout << "Str 1 = " << &str1 << endl;
+		cout << "Str 2 = " << &str2 << endl;
+		char &str1 = &str1 + &str2;
+		cout << "Str 1 = " << &str1 << endl;
+		cout << "Str 2 = " << &str2 << endl;
 	}break;
 	case 4:
 	{
 	}break;
 	case 5:
 	{
+
+	}break;
+	case 6:
+	{
+
 	}break;
 	}
 }
