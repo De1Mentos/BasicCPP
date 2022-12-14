@@ -159,6 +159,7 @@ int main()
         int** arr_2 = Initialize<int>(colB, rowB);
         int** arr_3 = Initialize<int>(colC, rowC);
         FirstZadacha(arr_1, colA, rowA, arr_2, colB, rowB, arr_3, colC, rowC, G);
+        cout << "Couldn't find any online sources for making this case";
         return 0;
     }break;
     case 3:
