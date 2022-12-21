@@ -160,7 +160,7 @@ public:
     void Input()
     {
         fullname_.Input();
-        cin.ignore();
+        //cin.ignore();//
         date_of_birthday_.Input();
         adress_.Input();
         stats_.Input();
