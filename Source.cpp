@@ -18,6 +18,8 @@ int Л = 3;
 int У = 3;
 int inv;
 
+int PickC;
+
 int Skillar;
 
 int opcii;
@@ -34,6 +36,236 @@ int WeaUn5;
 
 int Weapon = 0;
 int Armor = 0;
+
+int Event;
+void randomEV(string name)
+{
+    Event = rand() % 100;
+    cout << Event;
+    if (Event >= 92)
+    {
+        system("cls");
+        cout << "Вы нашли переход на следующий этаж!" << endl;
+        _getch();
+    }
+    if (Event <= 20)
+    {
+        system("cls");
+        cout << "Был обнаружен противник!" << endl;
+        _getch();
+    }
+    if (Event >= 20 && Event <= 25)
+    {
+        system("cls");
+        cout << "Стена. Ничего особенного, похоже она кирпичная" << endl;
+        _getch();
+    }
+    if (Event >= 26 && Event <= 30)
+    {
+        system("cls");
+        cout << "Стена. Ничего особенного, похоже она бетонная" << endl;
+        _getch();
+    }
+    if (Event >= 31 && Event <= 50)
+    {
+        system("cls");
+        cout << "Вы продвигаетесь дальше без проишествий" << endl;
+        _getch();
+    }
+    if (Event >= 51 && Event <= 55)
+    {
+        system("cls");
+        cout << "Вы нашли источник воды. Ваше здоровье полностью востановленно" << endl;
+        _getch();
+    }
+    if (Event >= 56 && Event <= 60)
+    {
+        system("cls");
+        cout << "Вы нашли предмет на полу, это был" << endl;
+        _getch();
+    }
+    if (Event >= 61 && Event <= 65)
+    {
+        system("cls");
+        cout << "Вы увидели человека" << endl;
+        _getch();
+    }
+    if (Event >= 66 && Event <= 70)
+    {
+        system("cls");
+        cout << "Закрытая дверь. Можно попытаться сломать силой или же вашей ловкостью" << endl;
+        _getch();
+        cout << "1 - Попытаться сломать её силой" << endl;
+        cout << "2 - Попытаться сломать её ловкостью" << endl;
+        cout << "Любое другое число - Оставить дверь в покое (Безсмысленно?)" << endl;
+        cin >> PickC;
+        if (PickC == 1)
+        {
+            cout << "Вы пытаетесь сломать её силой..." << endl;
+            _getch();
+            if (С >= 7)
+            {
+                cout << "...И вам успешно это удается! За дверью находится... " << endl;
+                _getch();
+                if (Event <= 13)
+                {
+                    cout << "Как наростить огромные банки" << endl;
+                    С += 1;
+                    cout << "Ваша сила теперь ровняется" << С << endl;
+                }
+                if (Event >= 14 && Event <= 27)
+                {
+                    cout << "Стрельба, Пушки и оружие" << endl;
+                    Во += 1;
+                    cout << "Ваше Восприятие теперь ровняется" << Во << endl;
+                }
+                if (Event >= 28 && Event <= 41)
+                {
+                    cout << "Как наростить пресс" << endl;
+                    Вы += 1;
+                    cout << "Ваша выносливость теперь ровняется" << Вы << endl;
+                }
+                if (Event >= 42 && Event <= 55)
+                {
+                    cout << "Пособник по разработке ПО" << endl;
+                    Вы += 1;
+                    cout << "Ваш интелект теперь ровняется" << И << endl;
+                }
+                if (Event >= 56 && Event <= 69)
+                {
+                    cout << "Как избежать преступление за убийство? Документальная брошура" << endl;
+                    Л += 1;
+                    cout << "Ваша ловкость теперь ровняется" << Л << endl;
+                }
+                if (Event >= 70 && Event <= 83)
+                {
+                    cout << "Мухлеж в текстовых ММО ДЖИ-РПЖИ" << endl;
+                    У += 1;
+                    cout << "Ваша удача теперь ровняется" << У << endl;
+                }
+                if (Event >= 84 && Event <= 100)
+                {
+                    cout << "Всесторонее саморазивитие" << endl;
+                    points += 1;
+                    cout << "Вы получили 1 очко улучшения умений!" << endl;
+                }
+            }
+            else
+            {
+                cout << "...Но это провал, и дверь теперь запечатанна." << endl;
+                _getch();
+            }
+        }
+        else if (PickC == 2)
+        {
+
+        }
+        else
+        {
+            cout << "Вы просто ушли с обиженным лицом. Мне вас не жаль." << endl;
+            _getch();
+        }
+
+    }
+    if (Event >= 71 && Event <= 75)
+    {
+        system("cls");
+        cout << "Компьютерный терминал, можно попытаться его взломать" << endl;
+        _getch();
+        cout << "Вы используете свои " << И * 10 + 40 << " IQ что бы взломать его" << endl;
+        if (И > 6)
+        {
+            cout << "Вам удалось сломать компьютер. На нем находился текстовый пособник по... " << endl;
+            _getch();
+            if (Event <= 13)
+            {
+                cout << "Как наростить огромные банки" << endl;
+                С += 1;
+                cout << "Ваша сила теперь ровняется" << С << endl;
+            }
+            if (Event >= 14 && Event <= 27)
+            {
+                cout << "Стрельба, Пушки и оружие" << endl;
+                Во += 1;
+                cout << "Ваше Восприятие теперь ровняется" << Во << endl;
+            }
+            if (Event >= 28 && Event <= 41)
+            {
+                cout << "Как наростить пресс" << endl;
+                Вы += 1;
+                cout << "Ваша выносливость теперь ровняется" << Вы << endl;
+            }
+            if (Event >= 42 && Event <= 55)
+            {
+                cout << "Пособник по разработке ПО" << endl;
+                Вы += 1;
+                cout << "Ваш интелект теперь ровняется" << И << endl;
+            }
+            if (Event >= 56 && Event <= 69)
+            {
+                cout << "Как избежать преступление за убийство? Документальная брошура" << endl;
+                Л += 1;
+                cout << "Ваша ловкость теперь ровняется" << Л << endl;
+            }
+            if (Event >= 70 && Event <= 83)
+            {
+                cout << "Мухлеж в текстовых ММО ДЖИ-РПЖИ" << endl;
+                У += 1;
+                cout << "Ваша удача теперь ровняется" << У << endl;
+            }
+            if (Event >= 84 && Event <= 100)
+            {
+                cout << "Всесторонее саморазивитие" << endl;
+                points += 1;
+                cout << "Вы получили 1 очко улучшения умений!" << endl;
+            }
+        }
+        else if (И <= 6)
+        {
+            cout << "Безнадежно, вам нужно больше интелекта...";
+            _getch();
+        }
+    }
+    if (Event >= 76 && Event <= 80)
+    {
+        system("cls");
+        cout << "Вы увидели выход!.." << endl;
+        _getch();
+        cout << "Или же это не выход?" << endl;
+        _getch();
+        cout << "Вы решили использовать ваше восприятие что бы узнать точно..." << endl;
+        _getch();
+        if (Во >= 7)
+        {
+            cout << "На самом деле выход! Наконец-то!" << endl;
+            _getch();
+        }
+        else
+        {
+            cout << "Вам нехватило вашего восприятие (Которое, кстати, на уровне близорукости) что бы определить выход это или нет. Вы решили пойти далее" << endl;
+            _getch();
+        }
+    }
+    if (Event >= 76 && Event <= 80)
+    {
+        system("cls");
+        cout << "Интересно, это хоть кто-то играет?" << endl;
+        _getch();
+    }
+    if (Event >= 81 && Event <= 84)
+    {
+        system("cls");
+        cout << "Вы нашли предмет на полу, это был" << endl;
+        _getch();
+    }
+    if (Event >= 85 && Event <= 90)
+    {
+        system("cls");
+        cout << "Ух ты, бетонно-кирпичная стена. Такое не каждый день увидите, сделайте скриншот" << endl;
+        _getch();
+    }
+}
+
 void invento(string name)
 {
   do 
@@ -42,7 +274,7 @@ void invento(string name)
     if (Weapon == 0)
     {
         cout << "Оружие: Руки" << endl;
-        cout << "Ближний урон - " << 10 + С << endl;
+        cout << "Ближний урон - " << 10 * С / 2 << endl;
         cout << "Дальний урон - " << 0 << endl;
         cout << "Шанс крита - " << 1 + У - 2 << "%" << endl;
         cout << "Особенности:" << endl;
@@ -54,6 +286,8 @@ void invento(string name)
         cout << "Ближний урон - " << 30 + С << endl;
         cout << "Дальний урон - " << 5 + Вы << endl;
         cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+        cout << "Особенности:" << endl;
+        cout << "Нету" << endl << endl;
     }
     if (Armor == 0)
     {
@@ -81,7 +315,7 @@ void invento(string name)
             if (Weapon == 0)
             {
                 cout << "Оружие: Руки" << endl;
-                cout << "Ближний урон - " << 10 + С << endl;
+                cout << "Ближний урон - " << 10 * С / 0.5 << endl;
                 cout << "Дальний урон - " << 0 << endl;
                 cout << "Шанс крита - " << 1 + У - 2 << "%" << endl;
                 cout << "Особенности:" << endl;
@@ -349,11 +583,14 @@ void stats(string name)
 
 int main()
 {  
-    do
-    {
     setlocale(LC_ALL, "Russian");
+    stats(name);
+    Skillar += 1;
     int TravelAction = 0;
     srand(static_cast<unsigned int>(time(0)));
+    do
+    {
+    system("cls");
     cout << "Что вы хотите сделать?" << endl << endl;
     cout << "1 - Пойти прямо" << endl;
     cout << "2 - Пойти влево" << endl;
@@ -364,15 +601,18 @@ int main()
     cin >> TravelAction;
     if (TravelAction == 1)
     {
-
+        cout << "Вы пошли прямо..." << endl;
+        randomEV(name);
     }
     else if (TravelAction == 2)
     {
-
+        cout << "Вы пошли влево..." << endl;
+        randomEV(name);
     }
     else if (TravelAction == 3)
     {
-
+        cout << "Вы пошли вправо..." << endl;
+        randomEV(name);
     }
     else if (TravelAction == 4)
     {
