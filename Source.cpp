@@ -44,6 +44,8 @@ int RaD;
 int Crit;
 int PlPt;
 
+
+
 int armUn0 = 1;
 int armUn1;
 int armUn2;
@@ -55,6 +57,132 @@ int Weapon = 0;
 int Armor = 0;
 
 int Event;
+
+void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int PlaHP, int Floor)
+{
+    if (Floor == 1)
+    {
+        Turn = 1;
+        std::cout << "Перед вами появляется маленький, противник - Кротокрыс.";
+        EneHP = (С + Во + Вы + И + Л + У) * 2 + 40;
+        PlaHP = Вы * 4 + 100;
+        do
+        {
+            if (Turn == 1 && PlaHP >= 1)
+            {
+                std::cout << "Здоровье игрока = " << PlaHP << endl;
+                std::cout << "Здоровье противника = " << EneHP << endl << endl;
+                std::cout << "Что вы ходите сделать?" << endl << endl;
+                std::cout << "1 - Атаковать в близи" << endl;
+                std::cout << "2 - Атаковать из далека" << endl;
+                std::cout << "3 - Защищаться" << endl;
+                std::cout << "4 - Незаметно убить" << endl;
+                cin >> TurnPick;
+                if (TurnPick == 1)
+                {
+                    std::cout << "Вы атаковали противника вблизи!" << endl;
+                    _getch();
+                    std::cout << "Нанесено ";
+                    Event = rand() % 100;
+                    if (Event + Crit >= 100)
+                    {
+                        std::cout << MeD * 3 << "Критического";
+                        EneHP -= MeD * 3;
+                    }
+                    else
+                    {
+                        std::cout << MeD;
+                        EneHP -= MeD;
+                    }
+                    std::cout << " Урона противнику!" << endl;
+
+                    Turn = 0;
+                }
+                else if (TurnPick == 2)
+                {
+                    std::cout << "Вы атаковали противника издалека!" << endl;
+                    _getch();
+                    std::cout << "Нанесено ";
+                    Event = rand() % 100;
+                    if (Event + Crit >= 100)
+                    {
+                        std::cout << RaD * 3 << "Критического";
+                        EneHP -= RaD * 3;
+                    }
+                    else
+                    {
+                        std::cout << RaD;
+                        EneHP -= RaD;
+                    }
+                    std::cout << " Урона противнику!" << endl;
+
+                    Turn = 0;
+                }
+                else if (TurnPick == 3)
+                {
+                    std::cout << "Вы защищаетесь!" << endl;
+                    _getch();
+                    Event = rand() % 100;
+                    std::cout << "Востановленно " << Event / 10 * (Вы - 2) + У << " ХП!";
+                    PlaHP += Event / 10 * Вы;
+
+                    Turn = 0;
+                }
+                else if (TurnPick == 4)
+                {
+                    std::cout << "Вы пытаетесь незаметно убить противника!" << endl;
+                    _getch();
+                    Event = rand() % 100;
+                    if (Event / 5 * Л - EneHP / 3 >= 100)
+                    {
+                        std::cout << "Вам удалось его незаметно убить!" << endl;
+                        EneHP = 0;
+                    }
+                    else
+                    {
+                        std::cout << "Не удалось, попробуйте ослабить противника." << endl;
+                    }
+                    Turn = 0;
+                }
+                else
+                {
+                    std::cout << "Такой опции нету!";
+                }
+            }
+            else if (Turn == 1 && PlaHP >= 1)
+            {
+                std::cout << "Вы умерли, и вроде бы, я должен начать игру с начала, но я дам вам поблажку - Востановленно 100 ХП" << endl;
+                PlaHP = +100;
+
+                Turn = 0;
+            }
+            else if (Turn == 0)
+            {
+                Event = rand() % 100;
+                if (Event >= 70)
+                {
+                    std::cout << "Противник наносит вам " << 20 * Floor / 2 - PlPt / 2 << " Урона!" << endl;
+                    PlaHP -= 20 * Floor / 2 - PlPt / 2;
+                }
+                else if (Event <= 95)
+                {
+                    std::cout << "Противник наносит вам " << 2 * 20 * Floor / 2 - PlPt / 2 << " Критического Урона!" << endl;
+                    PlaHP -= 2 * 20 * Floor / 2 - PlPt / 2;
+                }
+                else
+                {
+                    std::cout << "Противник защищается, и востанавливает " << 10 * Floor - У << " ХП!" << endl;
+                    EneHP += 10 * Floor - У;
+                }
+            }
+        } while (EneHP <= 1);
+        std::cout << "Противник умер!" << endl;
+    }
+    else if (Floor == 2)
+    {
+
+    }
+}
 
 int Floor =1; void randomEV(string name)
 {
@@ -72,7 +200,7 @@ int Floor =1; void randomEV(string name)
         system("cls");
         std::cout << "Был обнаружен противник!" << endl;
         _getch();
-        fight(name);
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
     }
     if (Event >= 20 && Event <= 25)
     {
@@ -447,117 +575,6 @@ void invento(string name)
             return;
         }
     } while (opciiINV == 3);
-}
-
-void fight(string name)
-{
-    if (Floor == 1)
-    {
-        Turn = 1;
-        std::cout << "Перед вами появляется маленький, противник - Кротокрыс.";
-        EneHP = (С + Во + Вы + И + Л + У) * 2 + 40;
-        PlaHP = Вы * 4 + 100;
-            do
-            {
-                if (Turn == 1 && PlaHP >= 1)
-                {
-                    std::cout << "Здоровье игрока = " << PlaHP << endl;
-                    std::cout << "Здоровье противника = " << EneHP << endl << endl;
-                    std::cout << "Что вы ходите сделать?" << endl << endl;
-                    std::cout << "1 - Атаковать в близи" << endl;
-                    std::cout << "2 - Атаковать из далека" << endl;
-                    std::cout << "3 - Защищаться" << endl;
-                    std::cout << "4 - Незаметно убить" << endl;
-                    cin >> TurnPick;
-                    if (TurnPick == 1)
-                    {
-                        std::cout << "Вы атаковали противника вблизи!" << endl;
-                        _getch();
-                        std::cout << "Нанесено "; 
-                        Event = rand() % 100;
-                        if (Event + Crit >= 100)
-                        {
-                            std::cout << MeD * 3 << "Критического";
-                            EneHP -= MeD * 3;
-                        }
-                        else
-                        {
-                            std::cout << MeD;
-                            EneHP -= MeD;
-                        }
-                        std::cout << " Урона противнику!" << endl;
-
-                        Turn = 0;
-                    }
-                    else if (TurnPick == 2)
-                    {
-                        std::cout << "Вы атаковали противника издалека!" << endl;
-                        _getch();
-                        std::cout << "Нанесено ";
-                        Event = rand() % 100;
-                        if (Event + Crit >= 100)
-                        {
-                            std::cout << RaD * 3 << "Критического";
-                            EneHP -= RaD * 3;
-                        }
-                        else
-                        {
-                            std::cout << RaD;
-                            EneHP -= RaD;
-                        }
-                        std::cout << " Урона противнику!" << endl;
-
-                        Turn = 0;
-                    }
-                    else if (TurnPick == 3)
-                    {
-                        std::cout << "Вы защищаетесь!" << endl;
-                        _getch();
-                        Event = rand() % 100;
-                        std::cout << "Востановленно " << Event / 10 * (Вы - 2) + У << " ХП!";
-                        PlaHP += Event / 10 * Вы;
-
-                        Turn = 0;
-                    }
-                    else if (TurnPick == 4)
-                    {
-                        std::cout << "Вы пытаетесь незаметно убить противника!" << endl;
-                        _getch();
-                        Event = rand() % 100;
-                        if (Event / 5 * Л - EneHP / 3 >= 100)
-                        {
-                            std::cout << "Вам удалось его незаметно убить!" << endl;
-                            EneHP = 0;
-                        }
-                        else
-                        {
-                            std::cout << "Не удалось, попробуйте ослабить противника." << endl;
-                        }
-                        Turn = 0;
-                    }
-                    else
-                    {
-                        std::cout << "Такой опции нету!";
-                    }
-                }
-                else if (Turn == 1 && PlaHP >= 1)
-                {
-                    std::cout << "Вы умерли, и вроде бы, я должен начать игру с начала, но я дам вам поблажку - Востановленно 100 ХП" << endl;
-                    PlaHP = +100;
-
-                    Turn = 0;
-                }
-                else if (Turn == 0)
-                {
-
-                }
-            } while (EneHP <= 1);
-            std::cout << "Противник умер!" << endl;
-    }
-    else if (Floor == 2)
-    {
-
-    }
 }
 
 void stats(string name)
