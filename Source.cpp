@@ -22,6 +22,7 @@ int Turn;
 int TurnPick;
 int EneHP;
 int PlaHP;
+int EneD;
 
 int PickC;
 
@@ -65,6 +66,78 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
         {
             std::cout << "Перед вами появляется маленький, противник - Кротокрыс." << endl;
             EneHP = (С + Во + Вы + И + Л + У) * 2 + 40;
+            EneD = 20 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 2)
+        {
+            std::cout << "Перед вами появляется агрессивный Рад-Таракан!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 65;
+            EneD = 27 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 3)
+        {
+            std::cout << "Перед вами появляется радиоактивный Гуль!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 80;
+            EneD = 34 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 4)
+        {
+            std::cout << "Перед вами появляется безумный Дикарь!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 95;
+            EneD = 41 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 5)
+        {
+            std::cout << "Перед вами появляется Рейдер!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 105;
+            EneD = 38 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 6)
+        {
+            std::cout << "Перед вами появляется Воин Браства Стали, он не хочет что бы вы вышли наружу!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 120;
+            EneD = 45 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 7)
+        {
+            std::cout << "Перед вами появляется Воин Братсва Стали в Силовой броне, берегитесь!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 135;
+            EneD = 52 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 7)
+        {
+            std::cout << "Перед вами появляется оромный Супер-Мутант!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 150;
+            EneD = 59 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 8)
+        {
+            std::cout << "Перед вами появляется Тяжело вооруженный Супер-Мутант!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 165;
+            EneD = 65 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 9)
+        {
+            std::cout << "Перед вами появляется Голиаф, самый большой Супер-Мутант!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 180;
+            EneD = 75 * Floor / 2 - PlPt / 2;
+            _getch();
+        }
+        else if (Floor == 10)
+        {
+            std::cout << "Перед вами появляется Мастер!" << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 200;
+            EneD = 80 * Floor / 2 - PlPt / 2;
+            _getch();
         }
         PlaHP = Вы * 4 + 100;
         if (Weapon == 0)
@@ -72,13 +145,6 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
             MeD = 10 * С / 2;
             RaD = 0 * Во / 2;
             Crit = 1 + У - 2;
-
-            std::cout << "Оружие: Руки" << endl;
-            std::cout << "Ближний урон - " << MeD << endl;
-            std::cout << "Дальний урон - " << RaD << endl;
-            std::cout << "Шанс крита - " << Crit << "%" << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
         }
         do
         {
@@ -180,21 +246,21 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                 Event = rand() % 100;
                 if (Event <= 70)
                 {
-                    std::cout << "Противник наносит вам " << 20 * Floor / 2 - PlPt / 2 << " Урона." << endl << endl;
-                    PlaHP -= 20 * Floor / 2 - PlPt / 2;
+                    std::cout << "Противник наносит вам " << EneD << " Урона." << endl << endl;
+                    PlaHP -= EneD;
                     _getch();
                     Turn = 1;
                 }
                 else if (Event >= 95)
                 {
-                    std::cout << "Противник наносит вам " << 2 * 20 * Floor / 2 - PlPt / 2 << " Критического Урона!" << endl << endl;
-                    PlaHP -= 2 * 20 * Floor / 2 - PlPt / 2;
+                    std::cout << "Противник наносит вам " << EneD * 3 << " Критического Урона!" << endl << endl;
+                    PlaHP -= EneD;
                     _getch();
                     Turn = 1;
                 }
                 else
                 {
-                    std::cout << "Противник защищается, и востанавливает " << 10 * Floor - У << " ХП!" << endl << endl;
+                    std::cout << "Противник защищается, и востанавливает " << EneD - Floor / 2 << " ХП!" << endl << endl;
                     EneHP += 10 * Floor - У;
                     _getch();
                     Turn = 1;
@@ -244,14 +310,16 @@ int Floor =1; void randomEV(string name)
     if (Event >= 51 && Event <= 55)
     {
         system("cls");
-        std::cout << "Вы нашли источник воды. Ваше здоровье полностью востановленно" << endl;
+        std::cout << "Был обнаружен противник!" << endl;
         _getch();
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
     }
     if (Event >= 56 && Event <= 60)
     {
         system("cls");
-        std::cout << "Вы нашли предмет на полу, это был" << endl;
+        std::cout << "Был обнаружен противник!" << endl;
         _getch();
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
     }
     if (Event >= 61 && Event <= 65)
     {
@@ -469,17 +537,12 @@ int Floor =1; void randomEV(string name)
             _getch();
         }
     }
-    if (Event >= 76 && Event <= 80)
-    {
-        system("cls");
-        std::cout << "Интересно, это хоть кто-то играет?" << endl;
-        _getch();
-    }
     if (Event >= 81 && Event <= 84)
     {
         system("cls");
-        std::cout << "Вы нашли предмет на полу, это был" << endl;
+        std::cout << "Вы нашли переход на следующий этаж!" << endl;
         _getch();
+        Floor += 1;
     }
     if (Event >= 85 && Event <= 90)
     {
@@ -546,8 +609,17 @@ void invento(string name)
                     std::cout << "Ближний урон - " << MeD << endl;
                     std::cout << "Дальний урон - " << RaD << endl;
                     std::cout << "Шанс крита - " << Crit << "%" << endl;
-                    std::cout << "Особенности:" << endl;
-                    std::cout << "Нету" << endl << endl;
+                }
+                if (Weapon == 1)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Заточенная палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 std::cout << "1 - Поменять оружие на другое" << endl;
                 std::cout << "2 - Выйти из меню" << endl;
@@ -560,7 +632,7 @@ void invento(string name)
                     }
                     if (WeaUn0 == 2)
                     {
-                        std::cout << "2 - Копье" << endl;
+                        std::cout << "2 - Острая Палка" << endl;
                     }
                     std::cout << "99 - Выйти" << endl;
                     cin >> WeaPick;
@@ -569,6 +641,14 @@ void invento(string name)
                         Weapon = 0;
                     }
                     else if (WeaPick == 1 && WeaUn0 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 2 && WeaUn1 == 1)
+                    {
+                        Weapon = 1;
+                    }
+                    else if (WeaPick == 2 && WeaUn1 == 0)
                     {
                         std::cout << "Такого оружия у вас нету!";
                     }
