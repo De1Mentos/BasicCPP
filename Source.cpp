@@ -60,16 +60,31 @@ int Event;
 
 void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int PlaHP, int Floor)
 {
-    if (Floor == 1)
-    {
         Turn = 1;
-        std::cout << "Перед вами появляется маленький, противник - Кротокрыс.";
-        EneHP = (С + Во + Вы + И + Л + У) * 2 + 40;
+        if (Floor == 1)
+        {
+            std::cout << "Перед вами появляется маленький, противник - Кротокрыс." << endl;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 40;
+        }
         PlaHP = Вы * 4 + 100;
+        if (Weapon == 0)
+        {
+            MeD = 10 * С / 2;
+            RaD = 0 * Во / 2;
+            Crit = 1 + У - 2;
+
+            std::cout << "Оружие: Руки" << endl;
+            std::cout << "Ближний урон - " << MeD << endl;
+            std::cout << "Дальний урон - " << RaD << endl;
+            std::cout << "Шанс крита - " << Crit << "%" << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
         do
         {
             if (Turn == 1 && PlaHP >= 1)
             {
+                system("cls");
                 std::cout << "Здоровье игрока = " << PlaHP << endl;
                 std::cout << "Здоровье противника = " << EneHP << endl << endl;
                 std::cout << "Что вы ходите сделать?" << endl << endl;
@@ -95,6 +110,7 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                         EneHP -= MeD;
                     }
                     std::cout << " Урона противнику!" << endl;
+                    _getch();
 
                     Turn = 0;
                 }
@@ -115,6 +131,7 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                         EneHP -= RaD;
                     }
                     std::cout << " Урона противнику!" << endl;
+                    _getch();
 
                     Turn = 0;
                 }
@@ -142,6 +159,8 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                     {
                         std::cout << "Не удалось, попробуйте ослабить противника." << endl;
                     }
+                    _getch();
+
                     Turn = 0;
                 }
                 else
@@ -159,29 +178,31 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
             else if (Turn == 0)
             {
                 Event = rand() % 100;
-                if (Event >= 70)
+                if (Event <= 70)
                 {
-                    std::cout << "Противник наносит вам " << 20 * Floor / 2 - PlPt / 2 << " Урона!" << endl;
+                    std::cout << "Противник наносит вам " << 20 * Floor / 2 - PlPt / 2 << " Урона." << endl << endl;
                     PlaHP -= 20 * Floor / 2 - PlPt / 2;
+                    _getch();
+                    Turn = 1;
                 }
-                else if (Event <= 95)
+                else if (Event >= 95)
                 {
-                    std::cout << "Противник наносит вам " << 2 * 20 * Floor / 2 - PlPt / 2 << " Критического Урона!" << endl;
+                    std::cout << "Противник наносит вам " << 2 * 20 * Floor / 2 - PlPt / 2 << " Критического Урона!" << endl << endl;
                     PlaHP -= 2 * 20 * Floor / 2 - PlPt / 2;
+                    _getch();
+                    Turn = 1;
                 }
                 else
                 {
-                    std::cout << "Противник защищается, и востанавливает " << 10 * Floor - У << " ХП!" << endl;
+                    std::cout << "Противник защищается, и востанавливает " << 10 * Floor - У << " ХП!" << endl << endl;
                     EneHP += 10 * Floor - У;
+                    _getch();
+                    Turn = 1;
                 }
             }
-        } while (EneHP <= 1);
+        } while (EneHP >= 1);
         std::cout << "Противник умер!" << endl;
-    }
-    else if (Floor == 2)
-    {
-
-    }
+        _getch();
 }
 
 int Floor =1; void randomEV(string name)
