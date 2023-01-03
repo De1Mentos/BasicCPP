@@ -5,6 +5,98 @@
 #include <io.h>
 #include <cstdlib>
 
+Event = rand() % 100;
+if (Event >= 50)
+{
+    if (WeaUn1 != 1)
+    {
+        WeaUn1 = 1;
+    }
+    else if (WeaUn2 != 1)
+    {
+        WeaUn2 = 1;
+    }
+    else if (WeaUn3 != 1 & Floor >= 2)
+    {
+        WeaUn3 = 1;
+    }
+    else if (WeaUn4 != 1 & Floor >= 2)
+    {
+        WeaUn4 = 1;
+    }
+    else if (WeaUn5 != 1 & Floor >= 3)
+    {
+        WeaUn5 = 1;
+    }
+    else if (WeaUn6 != 1 & Floor >= 4)
+    {
+        WeaUn6 = 1;
+    }
+    else if (WeaUn7 != 1 & Floor >= 5)
+    {
+        WeaUn7 = 1;
+    }
+    else if (WeaUn8 != 1 & Floor >= 6)
+    {
+        WeaUn8 = 1;
+    }
+    else if (WeaUn9 != 1 & Floor >= 6)
+    {
+        WeaUn9 = 1;
+    }
+    else if (WeaUn10 != 1 & Floor >= 6)
+    {
+        WeaUn10 = 1;
+    }
+    else
+    {
+        std::cout << "Выпал дополнительный опыт!" << endl;
+    }
+}
+else
+{
+    if (armUn1 != 1)
+    {
+        armUn1 = 1;
+    }
+    else if (armUn2 != 1)
+    {
+        armUn2 = 1;
+    }
+    else if (armUn3 != 1 & Floor >= 2)
+    {
+        armUn3 = 1;
+    }
+    else if (armUn4 != 1 & Floor >= 2)
+    {
+        armUn4 = 1;
+    }
+    else if (armUn5 != 1 & Floor >= 2)
+    {
+        armUn5 = 1;
+    }
+    else if (armUn6 != 1 & Floor >= 3)
+    {
+        armUn6 = 1;
+    }
+    else if (armUn7 != 1 & Floor >= 4)
+    {
+        armUn7 = 1;
+    }
+    else if (armUn8 != 1 & Floor >= 5)
+    {
+        armUn8 = 1;
+    }
+    else if (armUn9 != 1 & Floor >= 6)
+    {
+        armUn9 = 1;
+    }
+    else if (armUn10 != 1 & Floor >= 7)
+    {
+        armUn10 = 1;
+    }
+}
+
 using namespace std;
 
 string name = "Одиночка";
@@ -34,25 +126,33 @@ int opciiWEA;
 int WeaPick;
 
 int WeaUn0 = 1;
-int WeaUn1;
-int WeaUn2;
-int WeaUn3;
-int WeaUn4;
-int WeaUn5;
+int WeaUn1 = 0;
+int WeaUn2 = 0;
+int WeaUn3 = 0;
+int WeaUn4 = 0;
+int WeaUn5 = 0;
+int WeaUn6 = 0;
+int WeaUn7 = 0;
+int WeaUn8 = 0;
+int WeaUn9 = 0;
+int WeaUn10 = 0;
+
+int armUn0 = 1;
+int armUn1 = 0;
+int armUn2 = 0;
+int armUn3 = 0;
+int armUn4 = 0;
+int armUn5 = 0;
+int armUn6 = 0;
+int armUn7 = 0;
+int armUn8 = 0;
+int armUn9 = 0;
+int armUn10 = 0;
 
 int MeD;
 int RaD;
 int Crit;
 int PlPt;
-
-
-
-int armUn0 = 1;
-int armUn1;
-int armUn2;
-int armUn3;
-int armUn4;
-int armUn5;
 
 int Weapon = 0;
 int Armor = 0;
