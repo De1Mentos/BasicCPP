@@ -5,109 +5,17 @@
 #include <io.h>
 #include <cstdlib>
 
-Event = rand() % 100;
-if (Event >= 50)
-{
-    if (WeaUn1 != 1)
-    {
-        WeaUn1 = 1;
-    }
-    else if (WeaUn2 != 1)
-    {
-        WeaUn2 = 1;
-    }
-    else if (WeaUn3 != 1 & Floor >= 2)
-    {
-        WeaUn3 = 1;
-    }
-    else if (WeaUn4 != 1 & Floor >= 2)
-    {
-        WeaUn4 = 1;
-    }
-    else if (WeaUn5 != 1 & Floor >= 3)
-    {
-        WeaUn5 = 1;
-    }
-    else if (WeaUn6 != 1 & Floor >= 4)
-    {
-        WeaUn6 = 1;
-    }
-    else if (WeaUn7 != 1 & Floor >= 5)
-    {
-        WeaUn7 = 1;
-    }
-    else if (WeaUn8 != 1 & Floor >= 6)
-    {
-        WeaUn8 = 1;
-    }
-    else if (WeaUn9 != 1 & Floor >= 6)
-    {
-        WeaUn9 = 1;
-    }
-    else if (WeaUn10 != 1 & Floor >= 6)
-    {
-        WeaUn10 = 1;
-    }
-    else
-    {
-        std::cout << "Выпал дополнительный опыт!" << endl;
-    }
-}
-else
-{
-    if (armUn1 != 1)
-    {
-        armUn1 = 1;
-    }
-    else if (armUn2 != 1)
-    {
-        armUn2 = 1;
-    }
-    else if (armUn3 != 1 & Floor >= 2)
-    {
-        armUn3 = 1;
-    }
-    else if (armUn4 != 1 & Floor >= 2)
-    {
-        armUn4 = 1;
-    }
-    else if (armUn5 != 1 & Floor >= 2)
-    {
-        armUn5 = 1;
-    }
-    else if (armUn6 != 1 & Floor >= 3)
-    {
-        armUn6 = 1;
-    }
-    else if (armUn7 != 1 & Floor >= 4)
-    {
-        armUn7 = 1;
-    }
-    else if (armUn8 != 1 & Floor >= 5)
-    {
-        armUn8 = 1;
-    }
-    else if (armUn9 != 1 & Floor >= 6)
-    {
-        armUn9 = 1;
-    }
-    else if (armUn10 != 1 & Floor >= 7)
-    {
-        armUn10 = 1;
-    }
-}
-
 using namespace std;
 
 string name = "Одиночка";
 int points=10;
 
-int С = 3;
-int Во = 3;
-int Вы = 3;
-int И = 3;
-int Л = 3;
-int У = 3;
+int С = 1;
+int Во = 1;
+int Вы = 1;
+int И = 1;
+int Л = 1;
+int У = 1;
 int inv;
 
 int Turn;
@@ -157,9 +65,12 @@ int PlPt;
 int Weapon = 0;
 int Armor = 0;
 
+int EXP = 970;
+int Level;
+
 int Event;
 
-void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int PlaHP, int Floor)
+void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int PlaHP, int Floor, int EXP)
 {
         Turn = 1;
         if (Floor == 1)
@@ -369,6 +280,101 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
         } while (EneHP >= 1);
         std::cout << "Противник умер!" << endl;
         _getch();
+        EXP += 10 + Floor * 2;
+        Event = rand() % 100;
+        if (Event >= 50)
+        {
+            std::cout << "Вы нашли новое оружие." << endl;
+            if (WeaUn1 != 1)
+            {
+                WeaUn1 = 1;
+            }
+            else if (WeaUn2 != 1)
+            {
+                WeaUn2 = 1;
+            }
+            else if (WeaUn3 != 1 && Floor >= 2)
+            {
+                WeaUn3 = 1;
+            }
+            else if (WeaUn4 != 1 && Floor >= 2)
+            {
+                WeaUn4 = 1;
+            }
+            else if (WeaUn5 != 1 && Floor >= 3)
+            {
+                WeaUn5 = 1;
+            }
+            else if (WeaUn6 != 1 && Floor >= 4)
+            {
+                WeaUn6 = 1;
+            }
+            else if (WeaUn7 != 1 && Floor >= 5)
+            {
+                WeaUn7 = 1;
+            }
+            else if (WeaUn8 != 1 && Floor >= 6)
+            {
+                WeaUn8 = 1;
+            }
+            else if (WeaUn9 != 1 && Floor >= 6)
+            {
+                WeaUn9 = 1;
+            }
+            else if (WeaUn10 != 1 && Floor >= 6)
+            {
+                WeaUn10 = 1;
+            }
+        }
+        else if (Event <= 51)
+        {
+            std::cout << "Вы нашли новую броню." << endl;
+            if (armUn1 != 1)
+            {
+                armUn1 = 1;
+            }
+            else if (armUn2 != 1)
+            {
+                armUn2 = 1;
+            }
+            else if (armUn3 != 1 && Floor >= 2)
+            {
+                armUn3 = 1;
+            }
+            else if (armUn4 != 1 && Floor >= 2)
+            {
+                armUn4 = 1;
+            }
+            else if (armUn5 != 1 && Floor >= 2)
+            {
+                armUn5 = 1;
+            }
+            else if (armUn6 != 1 && Floor >= 3)
+            {
+                armUn6 = 1;
+            }
+            else if (armUn7 != 1 && Floor >= 4)
+            {
+                armUn7 = 1;
+            }
+            else if (armUn8 != 1 && Floor >= 5)
+            {
+                armUn8 = 1;
+            }
+            else if (armUn9 != 1 && Floor >= 6)
+            {
+                armUn9 = 1;
+            }
+            else if (armUn10 != 1 && Floor >= 7)
+            {
+                armUn10 = 1;
+            }
+        else
+            {
+                std::cout << "Выпал дополнительный опыт!" << endl;
+                EXP += 20 + Floor * 2;
+            }
+        }
 }
 
 int Floor =1; void randomEV(string name)
@@ -387,7 +393,7 @@ int Floor =1; void randomEV(string name)
         system("cls");
         std::cout << "Был обнаружен противник!" << endl;
         _getch();
-        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor, EXP);
     }
     if (Event >= 20 && Event <= 25)
     {
@@ -412,19 +418,19 @@ int Floor =1; void randomEV(string name)
         system("cls");
         std::cout << "Был обнаружен противник!" << endl;
         _getch();
-        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor, EXP);
     }
     if (Event >= 56 && Event <= 60)
     {
         system("cls");
         std::cout << "Был обнаружен противник!" << endl;
         _getch();
-        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor);
+        Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor, EXP);
     }
     if (Event >= 61 && Event <= 65)
     {
         system("cls");
-        std::cout << "Вы увидели человека" << endl;
+        std::cout << "Вы продвигаетесь дальше без проишествий" << endl;
         _getch();
     }
     if (Event >= 66 && Event <= 70)
@@ -672,12 +678,93 @@ void invento(string name)
         }
         else if (Weapon == 1)
         {
-           std::cout << "Оружие: Копье" << endl;
+           std::cout << "Оружие: Острая палка" << endl;
            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
            std::cout << "Особенности:" << endl;
            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 2)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 3)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 4)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 5)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 6)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 7)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 8)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 9)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
+        }
+        else if (Weapon == 10)
+        {
+            std::cout << "Оружие: Копье" << endl;
+            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
+            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
+            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
+            std::cout << "Особенности:" << endl;
+            std::cout << "Нету" << endl << endl;
         }
         if (Armor == 0)
         {
@@ -716,7 +803,106 @@ void invento(string name)
                     RaD = 5 * Во / 2;
                     Crit = 7 + У - 2;
 
-                    cout << "Оружие: Заточенная палка" << endl;
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 2)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 3)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 4)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 5)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 6)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 7)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 8)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 9)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Ближний урон - " << MeD << endl;
+                    cout << "Дальний урон - " << RaD << endl;
+                    cout << "Шанс крита - " << Crit << "%" << endl;
+                }
+                if (Weapon == 10)
+                {
+                    MeD = 20 * С / 2;
+                    RaD = 5 * Во / 2;
+                    Crit = 7 + У - 2;
+
+                    cout << "Оружие: Острая Палка" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
@@ -730,9 +916,45 @@ void invento(string name)
                     {
                         std::cout << "1 - Руки" << endl;
                     }
-                    if (WeaUn0 == 2)
+                    if (WeaUn1 == 1)
                     {
                         std::cout << "2 - Острая Палка" << endl;
+                    }
+                    if (WeaUn2 == 1)
+                    {
+                        std::cout << "3 - Бита" << endl;
+                    }
+                    if (WeaUn3 == 1)
+                    {
+                        std::cout << "4 - Ржавый револьвер" << endl;
+                    }
+                    if (WeaUn4 == 1)
+                    {
+                        std::cout << "5 - Кувалда" << endl;
+                    }
+                    if (WeaUn5 == 1)
+                    {
+                        std::cout << "6 - Пистолет-Пулемёт" << endl;
+                    }
+                    if (WeaUn6 == 1)
+                    {
+                        std::cout << "7 - Дробовик" << endl;
+                    }
+                    if (WeaUn7 == 1)
+                    {
+                        std::cout << "8 - Убер-Перчатки" << endl;
+                    }
+                    if (WeaUn8 == 1)
+                    {
+                        std::cout << "9 - Автомат" << endl;
+                    }
+                    if (WeaUn9 == 1)
+                    {
+                        std::cout << "10 - Миниган" << endl;
+                    }
+                    if (WeaUn10 == 1)
+                    {
+                        std::cout << "11 - 'Толстяк'" << endl;
                     }
                     std::cout << "99 - Выйти" << endl;
                     cin >> WeaPick;
@@ -749,6 +971,78 @@ void invento(string name)
                         Weapon = 1;
                     }
                     else if (WeaPick == 2 && WeaUn1 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 3 && WeaUn2 == 1)
+                    {
+                        Weapon = 3;
+                    }
+                    else if (WeaPick == 3 && WeaUn2 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 4 && WeaUn3 == 1)
+                    {
+                        Weapon = 3;
+                    }
+                    else if (WeaPick == 4 && WeaUn3 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 5 && WeaUn4 == 1)
+                    {
+                        Weapon = 4;
+                    }
+                    else if (WeaPick == 5 && WeaUn4 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 6 && WeaUn5 == 1)
+                    {
+                        Weapon = 5;
+                    }
+                    else if (WeaPick == 6 && WeaUn5 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 7 && WeaUn6 == 1)
+                    {
+                        Weapon = 6;
+                    }
+                    else if (WeaPick == 7 && WeaUn6 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 8 && WeaUn7 == 1)
+                    {
+                        Weapon = 7;
+                    }
+                    else if (WeaPick == 8 && WeaUn7 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 9 && WeaUn8 == 1)
+                    {
+                        Weapon = 8;
+                    }
+                    else if (WeaPick == 9 && WeaUn8 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 10 && WeaUn9 == 1)
+                    {
+                        Weapon = 9;
+                    }
+                    else if (WeaPick == 10 && WeaUn9 == 0)
+                    {
+                        std::cout << "Такого оружия у вас нету!";
+                    }
+                    else if (WeaPick == 11 && WeaUn10 == 1)
+                    {
+                        Weapon = 10;
+                    }
+                    else if (WeaPick == 11 && WeaUn10 == 0)
                     {
                         std::cout << "Такого оружия у вас нету!";
                     }
@@ -1026,11 +1320,11 @@ int main()
         }
         else if (Floor == 7)
         {
-
+            std::cout << "Седьмой этаж. Вы чуствуете тяжесть свои достижений на спине. ";
         }
         else if (Floor == 8)
         {
-
+            std::cout << "Шестой этаж. Чувствуется достижение. ";
         }
         else if (Floor == 9)
         {
@@ -1038,7 +1332,16 @@ int main()
         }
         else if (Floor == 10)
         {
-
+            std::cout << "Конец вашего путешествия близок";
+            _getch();
+            Fight(Event, С, Во, Вы, И, Л, У, EneHP, PlaHP, Floor, EXP);          
+        }
+        if (EXP == 1000)
+        {
+            std::cout << "Уровень повышен!" << endl;
+            points += 1;
+            Level += 1;
+            EXP -= (70 + Level * 12);
         }
         std::cout << "Что вы хотите сделать?" << endl << endl;
         std::cout << "1 - Пойти прямо" << endl;
