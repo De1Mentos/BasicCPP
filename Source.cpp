@@ -104,49 +104,49 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
         else if (Floor == 5)
         {
             std::cout << "Перед вами появляется Рейдер!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 105;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 150;
             EneD = 38 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 6)
         {
             std::cout << "Перед вами появляется Воин Браства Стали, он не хочет что бы вы вышли наружу!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 120;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 200;
             EneD = 45 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 7)
         {
             std::cout << "Перед вами появляется Воин Братсва Стали в Силовой броне, берегитесь!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 135;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 260;
             EneD = 52 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 7)
         {
             std::cout << "Перед вами появляется оромный Супер-Мутант!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 150;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 300;
             EneD = 59 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 8)
         {
             std::cout << "Перед вами появляется Тяжело вооруженный Супер-Мутант!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 165;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 400;
             EneD = 65 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 9)
         {
             std::cout << "Перед вами появляется Голиаф, самый большой Супер-Мутант!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 180;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 500;
             EneD = 75 * Floor / 2 - PlPt / 2;
             _getch();
         }
         else if (Floor == 10)
         {
             std::cout << "Перед вами появляется Мастер!" << endl;
-            EneHP = (С + Во + Вы + И + Л + У) * 2 + 200;
+            EneHP = (С + Во + Вы + И + Л + У) * 2 + 1000;
             EneD = 80 * Floor / 2 - PlPt / 2;
             _getch();
         }
@@ -156,6 +156,66 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
             MeD = 10 * С / 2;
             RaD = 0 * Во / 2;
             Crit = 1 + У - 2;
+        }
+        else if (Weapon == 1)
+        {
+            MeD = 20 * С / 2;
+            RaD = 5 * Во / 2;
+            Crit = 7 + У - 2;
+        }
+        else if (Weapon == 2)
+        {
+            MeD = 32 * С / 2;
+            RaD = 3 * Во / 2;
+            Crit = 5 + У - 2;
+        }
+        else if (Weapon == 3)
+        {
+            MeD = 6 * С / 2;
+            RaD = 40 * Во / 2;
+            Crit = 4 + У - 2;
+        }
+        else if (Weapon == 4)
+        {
+            MeD = 45 * С / 2;
+            RaD = 17 * Во / 2;
+            Crit = 15 + У - 2;
+        }
+        else if (Weapon == 5)
+        {
+            MeD = 7 * С / 2;
+            RaD = 45 * Во / 2;
+            Crit = 2 + У - 2;
+        }
+        else if (Weapon == 6)
+        {
+            MeD = 10 * С / 2;
+            RaD = 55 * Во / 2;
+            Crit = 5 + У - 2;
+        }
+        else if (Weapon == 7)
+        {
+            MeD = 60 * С / 2;
+            RaD = 0 * Во / 2;
+            Crit = 10 + У - 2;
+        }
+        else if (Weapon == 8)
+        {
+            MeD = 15 * С / 2;
+            RaD = 70 * Во / 2;
+            Crit = 7 + У - 2;
+        }
+        else if (Weapon == 9)
+        {
+            MeD = 3 * С / 2;
+            RaD = 100 * Во / 2;
+            Crit = 0 + У - 2;
+        }
+        else if (Weapon == 10)
+        {
+            MeD = 5 * С / 2;
+            RaD = 130 * Во / 2;
+            Crit = 0;
         }
         do
         {
@@ -673,98 +733,116 @@ void invento(string name)
             std::cout << "Ближний урон - " << MeD << endl;
             std::cout << "Дальний урон - " << RaD << endl;
             std::cout << "Шанс крита - " << Crit << "%" << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
         }
         else if (Weapon == 1)
         {
-           std::cout << "Оружие: Острая палка" << endl;
-           std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-           std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-           std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-           std::cout << "Особенности:" << endl;
-           std::cout << "Нету" << endl << endl;
+            MeD = 20 * С / 2;
+            RaD = 5 * Во / 2;
+            Crit = 7 + У - 2;
+
+            cout << "Оружие: Острая Палка" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 2)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 32 * С / 2;
+            RaD = 3 * Во / 2;
+            Crit = 5 + У - 2;
+
+            cout << "Оружие: Бита" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 3)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 6 * С / 2;
+            RaD = 40 * Во / 2;
+            Crit = 4 + У - 2;
+
+            cout << "Оружие: Ржавый револьвер" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 4)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 45 * С / 2;
+            RaD = 17 * Во / 2;
+            Crit = 15 + У - 2;
+
+            cout << "Оружие: Кувалда" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 5)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 7 * С / 2;
+            RaD = 45 * Во / 2;
+            Crit = 2 + У - 2;
+
+            cout << "Оружие: Пистолет-Пулемёт" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 6)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 10 * С / 2;
+            RaD = 55 * Во / 2;
+            Crit = 5 + У - 2;
+
+            cout << "Оружие: Дробовик" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 7)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 60 * С / 2;
+            RaD = 0 * Во / 2;
+            Crit = 10 + У - 2;
+
+            cout << "Оружие: Убер-Перчатки" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 8)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 15 * С / 2;
+            RaD = 70 * Во / 2;
+            Crit = 7 + У - 2;
+
+            cout << "Оружие: Автомат" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 9)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 3 * С / 2;
+            RaD = 100 * Во / 2;
+            Crit = 0 + У - 2;
+
+            cout << "Оружие: Миниган" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl;
         }
         else if (Weapon == 10)
         {
-            std::cout << "Оружие: Копье" << endl;
-            std::cout << "Ближний урон - " << 30 + С / 2 << endl;
-            std::cout << "Дальний урон - " << 5 * Во / 2 << endl;
-            std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl << endl;
+            MeD = 5 * С / 2;
+            RaD = 130 * Во / 2;
+            Crit = 0;
+
+            cout << "Оружие: 'Толстяк'" << endl;
+            cout << "Ближний урон - " << MeD << endl;
+            cout << "Дальний урон - " << RaD << endl;
+            cout << "Шанс крита - " << Crit << "%" << endl; std::cout << "Шанс крита - " << 1 + У - 2 << "%" << endl << endl;
         }
         if (Armor == 0)
         {
@@ -772,8 +850,6 @@ void invento(string name)
 
             std::cout << "Броня: Трапье" << endl;
             std::cout << "Защита - " << PlPt << endl;
-            std::cout << "Особенности:" << endl;
-            std::cout << "Нету" << endl;
         }
         std::cout << "Выберите действие" << endl;
         std::cout << "1 - Поменять оружие" << endl;
@@ -810,99 +886,99 @@ void invento(string name)
                 }
                 if (Weapon == 2)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 32 * С / 2;
+                    RaD = 3 * Во / 2;
+                    Crit = 5 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Бита" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 3)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 6 * С / 2;
+                    RaD = 40 * Во / 2;
+                    Crit = 4 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Ржавый револьвер" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 4)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 45 * С / 2;
+                    RaD = 17 * Во / 2;
+                    Crit = 15 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Кувалда" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 5)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 7 * С / 2;
+                    RaD = 45 * Во / 2;
+                    Crit = 2 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Пистолет-Пулемёт" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 6)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 10 * С / 2;
+                    RaD = 55 * Во / 2;
+                    Crit = 5 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Дробовик" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 7)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 60 * С / 2;
+                    RaD = 0 * Во / 2;
+                    Crit = 10 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Убер-Перчатки" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 8)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
+                    MeD = 15 * С / 2;
+                    RaD = 70 * Во / 2;
                     Crit = 7 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Автомат" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 9)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 3 * С / 2;
+                    RaD = 100 * Во / 2;
+                    Crit = 0 + У - 2;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: Миниган" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
                 }
                 if (Weapon == 10)
                 {
-                    MeD = 20 * С / 2;
-                    RaD = 5 * Во / 2;
-                    Crit = 7 + У - 2;
+                    MeD = 5 * С / 2;
+                    RaD = 130 * Во / 2;
+                    Crit = 0;
 
-                    cout << "Оружие: Острая Палка" << endl;
+                    cout << "Оружие: 'Толстяк'" << endl;
                     cout << "Ближний урон - " << MeD << endl;
                     cout << "Дальний урон - " << RaD << endl;
                     cout << "Шанс крита - " << Crit << "%" << endl;
