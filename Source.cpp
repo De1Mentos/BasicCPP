@@ -392,7 +392,6 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                 EXP += 20 + Floor * 2;
             }
         }
-}
 
 int Floor =1; void randomEV(string name)
 {
