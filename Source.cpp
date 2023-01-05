@@ -342,7 +342,7 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
         _getch();
         EXP += 10 + Floor * 2;
         Event = rand() % 100;
-        if (Event >= 50)
+        if (Event >= 90)
         {
             std::cout << "Вы нашли новое оружие." << endl;
             if (WeaUn1 != 1)
@@ -386,49 +386,6 @@ void Fight(int Event, int С, int Во, int Вы, int И, int Л, int У, int EneHP, int
                 WeaUn10 = 1;
             }
         }
-        else if (Event <= 51)
-        {
-            std::cout << "Вы нашли новую броню." << endl;
-            if (armUn1 != 1)
-            {
-                armUn1 = 1;
-            }
-            else if (armUn2 != 1)
-            {
-                armUn2 = 1;
-            }
-            else if (armUn3 != 1 && Floor >= 2)
-            {
-                armUn3 = 1;
-            }
-            else if (armUn4 != 1 && Floor >= 2)
-            {
-                armUn4 = 1;
-            }
-            else if (armUn5 != 1 && Floor >= 2)
-            {
-                armUn5 = 1;
-            }
-            else if (armUn6 != 1 && Floor >= 3)
-            {
-                armUn6 = 1;
-            }
-            else if (armUn7 != 1 && Floor >= 4)
-            {
-                armUn7 = 1;
-            }
-            else if (armUn8 != 1 && Floor >= 5)
-            {
-                armUn8 = 1;
-            }
-            else if (armUn9 != 1 && Floor >= 6)
-            {
-                armUn9 = 1;
-            }
-            else if (armUn10 != 1 && Floor >= 7)
-            {
-                armUn10 = 1;
-            }
         else
             {
                 std::cout << "Выпал дополнительный опыт!" << endl;
