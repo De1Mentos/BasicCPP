@@ -446,19 +446,112 @@ Sleep(rand() % 400);
 	}
 	_getch();
 	system("CLS");
+	int Randy;
 	int HP1, HP2;
+	int PR1, PR2;
+	int atA, atB, atC, at1, at2, at3;
+	int Expecto1, Expecto2, Lumos1, Lumos2;
 	int turn = 1;
+	int fight1, fight2;
 	while (HP1 >= 1 && HP2 >= 1)
 	{
 		if (turn == 1)
 		{
+			system("CLS");
+			PR1 = 0;
+			PR1 = Expecto1;
 			cout << name1 << " HP is " << HP1 << endl;
 			cout << name2 << " HP is " << HP2 << endl;
 			cout << name1 << " turn!";
 			cout << "\n\nWhat you want to do?";
-			cout << "1 - Attack";
-			cout << "2 - Defend";
-			cout << "3 - Use magic skill";
+			cout << "\n1 - Attack";
+			cout << "\n2 - Defend";
+			cout << "\n3 - Use magic skill" << endl << endl;
+			cin >> fight1;
+			system("CLS");
+			if (fight1 == 1)
+			{
+				cout << name1 << " attacks " << name2 << "!";
+				atA = rand() % 10 + Lumos1 - PR2 / 13;
+				atB = rand() % 10 + Lumos1 - PR2 / 13;
+				atC = rand() % 10 + Lumos1 - PR2 / 13;
+				cout << "\n" << "First attack - " << atA << " damage!";
+				cout << "\n" << "Second attack - " << atB << " damage!";
+				cout << "\n" << "Third attack - " << atC << " damage!";
+				cout << "\n\n" << name1 << " have done " << atA + atB + atC << " damage!";
+				HP2 -= atA + atB + atC;
+
+			}
+			else if (fight1 == 2)
+			{
+				cout << name1 << " protects himself!" << endl;
+				PR1 = rand() % 100;
+				cout << name1 << "Protects himself for " << PR1 << " points!";
+			}
+			else if (fight1 == 3)
+			{
+				if (spell1 == 1)
+				{
+					cout << "\nExpelliarmus - The Disarming Charm!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						cout << "\n\nMagic wand have fallen out of " << name2 << " hand! He can't attack for next turn!";
+						cout << "\nAlso you done 10 damage to enemie!";
+						HP2 -= 10;
+						///add more details///
+					}
+					else
+					{
+						cout << "\nYou've missed!";
+						cout << "\nBut also you done 5 damage to enemie!";
+						HP2 -= 5;
+					}
+				}
+				else if (spell1 == 2)
+				{
+					cout << "\nAvada Kedavra - The cursed spell!";
+					///add more details///
+				}
+				else if (spell1 == 3)
+				{
+					cout << "\nExpecto Patronum - Permenantly increase your protection!";
+					Expecto1 += 5;
+					cout << "\nYour protection was increased by 5! It's " << Expecto1 << " now!";
+				}
+				else if (spell1 == 4)
+				{
+					cout << "\nWingardium Leviosa - Floating spell!";
+					///add more details///
+				}
+				else if (spell1 == 5)
+				{
+					cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
+					///add more details///
+				}
+				else if (spell1 == 6)
+				{
+					cout << "\nAccio - The Summoning Charm!";
+					///add more details///
+				}
+				else if (spell1 == 7)
+				{
+					cout << "\nSectumsempra - A mystery spell!";
+					Randy = rand() % 8;
+					///add more details///
+				}
+				else if (spell1 == 8)
+				{
+					cout << "\nLumos - Makes all your future attacks stronger!";
+					Lumos1 += 3;
+					cout << "Your attack was increased by 3! It's " << Lumos1 << " now!";
+				}
+			}
+			else
+			{
+				cout << name1 << "skipped turn! What a disapointment...";
+			}
+			turn = 2;
 			_getch();
 		}
 		else if (turn == 2)
@@ -470,6 +563,7 @@ Sleep(rand() % 400);
 			cout << "1 - Attack";
 			cout << "2 - Defend";
 			cout << "3 - Use magic skill";
+			cin >> fight2;
 			_getch();
 		}
     }
