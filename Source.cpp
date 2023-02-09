@@ -11,96 +11,96 @@ int main()
 {
 	srand(time(NULL));
 	Sleep(rand() % 400);
-	cout << "Welcome to 'Hogwarts. Student Wars. HARRY POTER PREMIUM PACK'";
-	cout << "\n\nMentor studio - All rights served - 1997";
-	cout << "\n\nPlease, open console in full window for the best gaming expirience";
+	std::cout << "Welcome to 'Hogwarts. Student Wars. HARRY POTER PREMIUM PACK'";
+	std::cout << "\n\nMentor studio - All rights served - 1997";
+	std::cout << "\n\nPlease, open console in full window for the best gaming expirience";
 	_getch();
 	for (size_t i = 0; i < 30; i++)
 	{
-		cout << "\nLoading Text sustem - " << i << "%";
+		std::cout << "\nLoading Text sustem - " << i << "%";
 		Sleep(rand() % 30);
 		i += rand() % 3;
 	}
 	Sleep(140);
 	for (size_t i = 30; i < 101; i++)
 	{
-		cout << "\nLoading Main elements - " << i << "%";
+		std::cout << "\nLoading Main elements - " << i << "%";
 		Sleep(rand() % 25);
 		i += rand() % 3;
 	}
 	Sleep(140);
 	for (size_t i = 65; i < 101; i++)
 	{
-		cout << "\nLoading Fighting sustem - " << i << "%";
+		std::cout << "\nLoading Fighting sustem - " << i << "%";
 		Sleep(rand() % 40);
 		i += rand() % 3;
 	}
 	Sleep(140);
 	for (size_t i = 90; i < 101; i++)
 	{
-		cout << "\nLoading Logo - " << i << "%";
+		std::cout << "\nLoading Logo - " << i << "%";
 		Sleep(rand() % 13);
 		i += rand() % 3;
 	}
 	Sleep(180);
-	cout << "\nLoading Finished!";
+	std::cout << "\nLoading Finished!";
 	Sleep(1300);
 	system("CLS");
-cout << "\n...##/*********************. ........   ..              ...............,###@@###(@(.....,,.....  ...            .....,**/////*****/////////(	";Sleep(150);
-cout << "\n,,/********************//***,.........                  ....    ......,.((%@@...*/@@      ..      .            ...,,,**///////****//////*/((	";Sleep(150);
-cout << "\n,****.,,*#//////*,,,@@@&,*****,.,......   .        *(  .    .    ... ...*/(@@   *(/@@               *#@    ...* ....,**//////********//**///	";Sleep(150);
-cout << "\n,*****,,.,,@@&(,,,,,@@@&,,,,,,,,,,,,...,/*&.#@    ##@(#@.         . .   .//@@   ,((@@             %/(&@//....(@.....,,*********,,,**********	";Sleep(150);
-cout << "\n,*******,. @&%(,,,,.@&&%,,,,,/*%&%*,,...#@# ##@   (%% .*&           ..   ((@@   ,%(@@               ##@....%/@@.  ...,*%*******,/@*/%*,,/,**	";Sleep(150);
-cout << "\n,*******,,,#%%/,,...@&//,,,&@@/,.@&#....#@%* #&&  (#% %        (,,..    #@@@@   .&%@@    /#@,#@    .#&@..,,,(%@.    (@.*&@@,,,//##.#&@,*,***	";Sleep(150);
-cout << "\n,,,,,,,,,,,@@(* ....%(%%,,,,.,,..@@#(,..(@&( .    #%@   %*@     &&@     *((@@%/ *##@//,%%@ %//(@& ..(%@.,,,,(#@.   #%@.,*%@&,,,##@.,#%**,,**	";Sleep(150);
-cout << "\n,,,,,,,,,,,@@&(..   @&@%..,,**##%&%((..,/&@%...   (#@    (@    &(@       ##@&, /@@&    &@&..../@@...(&@.,,  //&,.  ##%##%*%/,,,%(@.(.,,.,,,,	";Sleep(150);
-cout << "\n,,,,,/@,,,,@@&/.... @@&@..../%...&@#(..,*#&&...   (#@  ..(%/  %(@       (##&@*      ...&@@..../@@..,(&%,.  .//%,   (%@.....,,,,%#@ ..,,.,,,,	";Sleep(150);
-cout << "\n,,,,,#(,,,.@@%/..//@@@@@ ..&&%,..&&((...,@&@...  .(#@.....%* /%@..,.,...&&%/(*   ..,...&&&,,..(@@..,(&@  ...//%,   /&@....,....&#@ ..,..,,,,	";Sleep(150);
-cout << "\n,,,,,,,.#@%#&%&@@...((@@    @#%..//((....@&@... ..%#@.....#%*&&...,,,,,,(%@@,/ .,,,,,,,&%/,,..(&(.,,#@@.....(/&*   #&@ ..&.....##@ .....,,,,	";Sleep(150);
-cout << "\n,,,,,,,....(&/,.... #(@@    &@###%*@@*..,*@*..  ..........(/%&.....,,,,,*&(/,/.,/,,,,,,,#*,,..#&(,,,%@@.... ##@(   (%@ .*&@....%#@.........,	";Sleep(150);
-cout << "\n...,.......#&/,.... &%@@     @@  &@ .........   .........//%........,,,,,&&(....,,,****,**&%%&(,,,..&@&.... %#@#     @@%@ .... *(/,.........	";Sleep(150);
-cout << "\n...........(%/,...  #/%&        ....  ...//@..  .......*/&&..........,,,,@#&,,,,,********,,...,,,....,% . ..%(&% /*..    .... /@@@%*./(.....	";Sleep(150);
-cout << "\n...........(#/,...  (/((        ....... ,@&/(((/*..   (/@,........  ..,,,(/,,,,,,,******,,..,,,........ .,,,,*. &%,&      ...........  .....	";Sleep(150);
-cout << "\n..........//&/,..   (/((             ...,,. .    ,*(&&@@...........* ..,,*/,.,,,,,,,,*,,,,...,....... ,,//((#(///*.        ..........     ..	";Sleep(150);
-cout << "\n   ..........  ,   #/(((       ,,*,,,#,*((/*,      ............. ..   .,,,/,.,,.,,,,,,,,....,.......,,@/(###(%%##/(@/,         .....       .	";Sleep(150);
-cout << "\n.......           ,.   .#% ,.,,**,((####(#*,,,        ........  /*     .,.*.....****/(%&(/..  ..   (*,@/((#%####((((%**            .      ..	";Sleep(150);
-cout << "\n                            ..*/,,(((((((((,*,,             /%@@&&#*    ..,.****/////(/&&///  ...... #,*%*/####/((/**,*                     	";Sleep(150);
-cout << "\n                             *.*%/,((((((/(/,,,,          %%%%%%&%%#/    ..,****//%##(*//*#*/  ......  .*,*/*//(/*,,*,                      	";Sleep(150);
-cout << "\n                               ..*&@(*,*,,,*,,,        %##@@@@&@@%@%((.      **,**(//////%#(//  ........  **,.,,,,*(                        	";Sleep(150);
-cout << "\n                                 %,..,,**,..,,       %(#@@&@@@@&%%%%#/#       #*,/////#%##/(///    .......    #(((                          	";Sleep(150);
-cout << "\n                                          .         %(#%&&#&@%&&&&%&#/(        %*,%//(#(/////**/      .                                     	";Sleep(150);
-cout << "\n                                                    %/(#&%&&%&%%%&@#(/          */,*@#*////((**/                                            	";Sleep(150);
-cout << "\n                                                     %(*(%@@@@###(//(             #/*,,,,**/((                                              	";Sleep(150);
-cout << "\n                                                       (&%#((((##.                                        									";
-cout << "\n\n\nClick anything to continue///";
+std::cout << "\n...##/*********************. ........   ..              ...............,###@@###(@(.....,,.....  ...            .....,**/////*****/////////(	";Sleep(150);
+std::cout << "\n,,/********************//***,.........                  ....    ......,.((%@@...*/@@      ..      .            ...,,,**///////****//////*/((	";Sleep(150);
+std::cout << "\n,****.,,*#//////*,,,@@@&,*****,.,......   .        *(  .    .    ... ...*/(@@   *(/@@               *#@    ...* ....,**//////********//**///	";Sleep(150);
+std::cout << "\n,*****,,.,,@@&(,,,,,@@@&,,,,,,,,,,,,...,/*&.#@    ##@(#@.         . .   .//@@   ,((@@             %/(&@//....(@.....,,*********,,,**********	";Sleep(150);
+std::cout << "\n,*******,. @&%(,,,,.@&&%,,,,,/*%&%*,,...#@# ##@   (%% .*&           ..   ((@@   ,%(@@               ##@....%/@@.  ...,*%*******,/@*/%*,,/,**	";Sleep(150);
+std::cout << "\n,*******,,,#%%/,,...@&//,,,&@@/,.@&#....#@%* #&&  (#% %        (,,..    #@@@@   .&%@@    /#@,#@    .#&@..,,,(%@.    (@.*&@@,,,//##.#&@,*,***	";Sleep(150);
+std::cout << "\n,,,,,,,,,,,@@(* ....%(%%,,,,.,,..@@#(,..(@&( .    #%@   %*@     &&@     *((@@%/ *##@//,%%@ %//(@& ..(%@.,,,,(#@.   #%@.,*%@&,,,##@.,#%**,,**	";Sleep(150);
+std::cout << "\n,,,,,,,,,,,@@&(..   @&@%..,,**##%&%((..,/&@%...   (#@    (@    &(@       ##@&, /@@&    &@&..../@@...(&@.,,  //&,.  ##%##%*%/,,,%(@.(.,,.,,,,	";Sleep(150);
+std::cout << "\n,,,,,/@,,,,@@&/.... @@&@..../%...&@#(..,*#&&...   (#@  ..(%/  %(@       (##&@*      ...&@@..../@@..,(&%,.  .//%,   (%@.....,,,,%#@ ..,,.,,,,	";Sleep(150);
+std::cout << "\n,,,,,#(,,,.@@%/..//@@@@@ ..&&%,..&&((...,@&@...  .(#@.....%* /%@..,.,...&&%/(*   ..,...&&&,,..(@@..,(&@  ...//%,   /&@....,....&#@ ..,..,,,,	";Sleep(150);
+std::cout << "\n,,,,,,,.#@%#&%&@@...((@@    @#%..//((....@&@... ..%#@.....#%*&&...,,,,,,(%@@,/ .,,,,,,,&%/,,..(&(.,,#@@.....(/&*   #&@ ..&.....##@ .....,,,,	";Sleep(150);
+std::cout << "\n,,,,,,,....(&/,.... #(@@    &@###%*@@*..,*@*..  ..........(/%&.....,,,,,*&(/,/.,/,,,,,,,#*,,..#&(,,,%@@.... ##@(   (%@ .*&@....%#@.........,	";Sleep(150);
+std::cout << "\n...,.......#&/,.... &%@@     @@  &@ .........   .........//%........,,,,,&&(....,,,****,**&%%&(,,,..&@&.... %#@#     @@%@ .... *(/,.........	";Sleep(150);
+std::cout << "\n...........(%/,...  #/%&        ....  ...//@..  .......*/&&..........,,,,@#&,,,,,********,,...,,,....,% . ..%(&% /*..    .... /@@@%*./(.....	";Sleep(150);
+std::cout << "\n...........(#/,...  (/((        ....... ,@&/(((/*..   (/@,........  ..,,,(/,,,,,,,******,,..,,,........ .,,,,*. &%,&      ...........  .....	";Sleep(150);
+std::cout << "\n..........//&/,..   (/((             ...,,. .    ,*(&&@@...........* ..,,*/,.,,,,,,,,*,,,,...,....... ,,//((#(///*.        ..........     ..	";Sleep(150);
+std::cout << "\n   ..........  ,   #/(((       ,,*,,,#,*((/*,      ............. ..   .,,,/,.,,.,,,,,,,,....,.......,,@/(###(%%##/(@/,         .....       .	";Sleep(150);
+std::cout << "\n.......           ,.   .#% ,.,,**,((####(#*,,,        ........  /*     .,.*.....****/(%&(/..  ..   (*,@/((#%####((((%**            .      ..	";Sleep(150);
+std::cout << "\n                            ..*/,,(((((((((,*,,             /%@@&&#*    ..,.****/////(/&&///  ...... #,*%*/####/((/**,*                     	";Sleep(150);
+std::cout << "\n                             *.*%/,((((((/(/,,,,          %%%%%%&%%#/    ..,****//%##(*//*#*/  ......  .*,*/*//(/*,,*,                      	";Sleep(150);
+std::cout << "\n                               ..*&@(*,*,,,*,,,        %##@@@@&@@%@%((.      **,**(//////%#(//  ........  **,.,,,,*(                        	";Sleep(150);
+std::cout << "\n                                 %,..,,**,..,,       %(#@@&@@@@&%%%%#/#       #*,/////#%##/(///    .......    #(((                          	";Sleep(150);
+std::cout << "\n                                          .         %(#%&&#&@%&&&&%&#/(        %*,%//(#(/////**/      .                                     	";Sleep(150);
+std::cout << "\n                                                    %/(#&%&&%&%%%&@#(/          */,*@#*////((**/                                            	";Sleep(150);
+std::cout << "\n                                                     %(*(%@@@@###(//(             #/*,,,,**/((                                              	";Sleep(150);
+std::cout << "\n                                                       (&%#((((##.                                        									";
+std::cout << "\n\n\nClick anything to continue///";
 _getch();
 system("CLS");
 int PL1;
 int PL2;
 string name1;
 string name2;
-cout << "\nPlayer 1 - Pick your MAGE";
+std::cout << "\nPlayer 1 - Pick your MAGE";
 Sleep(rand() % 200);
 int cla1 = 0;
-cout << "\n\nGryffindor";
-cout << "\n1 - Toad Toazer - Fighter";
-cout << "\n2 - Rose Wax - Fast";
-cout << "\n3 - Harry Potter - Best student";
+std::cout << "\n\nGryffindor";
+std::cout << "\n1 - Toad Toazer - Fighter";
+std::cout << "\n2 - Rose Wax - Fast";
+std::cout << "\n3 - Harry Potter - Best student";
 Sleep(rand() % 260);
-cout << "\n\nRavenclaw";
-cout << "\n4 - Luna Lovegood - Fast";
-cout << "\n5 - Sybill Trelawney - Fighter";
-cout << "\n6 - Marcus Belby - Healthy";
+std::cout << "\n\nRavenclaw";
+std::cout << "\n4 - Luna Lovegood - Fast";
+std::cout << "\n5 - Sybill Trelawney - Fighter";
+std::cout << "\n6 - Marcus Belby - Healthy";
 Sleep(rand() % 200);
-cout << "\n\nHufflepuff";
-cout << "\n7 - Bridget Wenlock - Healthy";
-cout << "\n8 - Cedric Diggory - Best student";
-cout << "\n9 - Ernie Macmillan - Fast";
+std::cout << "\n\nHufflepuff";
+std::cout << "\n7 - Bridget Wenlock - Healthy";
+std::cout << "\n8 - Cedric Diggory - Best student";
+std::cout << "\n9 - Ernie Macmillan - Fast";
 Sleep(rand() % 250);
-cout << "\n\nSlytherin";
-cout << "\n10 - Shawn Morris - Healthy";
-cout << "\n11 - Adelaide Murton - Fighter";
-cout << "\n12 - Irfan Mustaq - Fast" << endl << endl;
+std::cout << "\n\nSlytherin";
+std::cout << "\n10 - Shawn Morris - Healthy";
+std::cout << "\n11 - Adelaide Murton - Fighter";
+std::cout << "\n12 - Irfan Mustaq - Fast" << endl << endl;
 cin >> PL1;
 if (PL1 == 1)
 {
@@ -150,31 +150,31 @@ if (PL1 == 12)
 {
 	name1 = "Irfan Mustaq";
 }
-cout << "\n\n" << name1 << " Was chosen as Player 1 mage!";
+std::cout << "\n\n" << name1 << " Was chosen as Player 1 mage!";
 Sleep(1300);
 system("CLS");
-cout << "\nPlayer 2 - Pick your MAGE";
+std::cout << "\nPlayer 2 - Pick your MAGE";
 Sleep(rand() % 200);
 int cla2 = 0;
-cout << "\n\nGryffindor";
-cout << "\n1 - Toad Toazer - Fighter";
-cout << "\n2 - Rose Wax - Fast";
-cout << "\n3 - Harry Potter - Best student";
+std::cout << "\n\nGryffindor";
+std::cout << "\n1 - Toad Toazer - Fighter";
+std::cout << "\n2 - Rose Wax - Fast";
+std::cout << "\n3 - Harry Potter - Best student";
 Sleep(rand() % 260);
-cout << "\n\nRavenclaw";
-cout << "\n4 - Luna Lovegood - Fast";
-cout << "\n5 - Sybill Trelawney - Fighter";
-cout << "\n6 - Marcus Belby - Healthy";
+std::cout << "\n\nRavenclaw";
+std::cout << "\n4 - Luna Lovegood - Fast";
+std::cout << "\n5 - Sybill Trelawney - Fighter";
+std::cout << "\n6 - Marcus Belby - Healthy";
 Sleep(rand() % 200);
-cout << "\n\nHufflepuff";
-cout << "\n7 - Bridget Wenlock - Healthy";
-cout << "\n8 - Cedric Diggory - Best student";
-cout << "\n9 - Ernie Macmillan - Fast";
+std::cout << "\n\nHufflepuff";
+std::cout << "\n7 - Bridget Wenlock - Healthy";
+std::cout << "\n8 - Cedric Diggory - Best student";
+std::cout << "\n9 - Ernie Macmillan - Fast";
 Sleep(rand() % 250);
-cout << "\n\nSlytherin";
-cout << "\n10 - Shawn Morris - Healthy";
-cout << "\n11 - Adelaide Murton - Fighter";
-cout << "\n12 - Irfan Mustaq - Fast" << endl << endl;
+std::cout << "\n\nSlytherin";
+std::cout << "\n10 - Shawn Morris - Healthy";
+std::cout << "\n11 - Adelaide Murton - Fighter";
+std::cout << "\n12 - Irfan Mustaq - Fast" << endl << endl;
 cin >> PL2;
 if (PL2 == 1)
 {
@@ -224,19 +224,19 @@ if (PL2 == 12)
 {
 	name2 = "Irfan Mustaq";
 }
-cout << "\n\n" << name2 << " Was chosen as Player 2 mage!";
+std::cout << "\n\n" << name2 << " Was chosen as Player 2 mage!";
 Sleep(1300);
 system("CLS");
 Sleep(400);
 int Location;
-cout << "Pick location of your fight!";
-cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
-cout << "\n\n 1- Duel Class               Might be bland and boring, but classic none the less!";
-cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
-cout << "\n\n 2- Dark Forest              Dangerous, lots of evil creature, stakes here are high!";
-cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
-cout << "\n\n 3- Swamp                    Area of land permanently saturated, filled with water!";
-cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#" << endl << endl;
+std::cout << "Pick location of your fight!";
+std::cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
+std::cout << "\n\n 1- Duel Class               Might be bland and boring, but classic none the less!";
+std::cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
+std::cout << "\n\n 2- Dark Forest              Dangerous, lots of evil creature, stakes here are high!";
+std::cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#";
+std::cout << "\n\n 3- Swamp                    Area of land permanently saturated, filled with water!";
+std::cout << "\n\n@@&@@@@&%%%((%%(%#@@&@@@@&%%%%#@@&@@@((%#@@&@@@@&%%%%#@@&@@@(((((&%%%%#@@&@@@@&%%%%#@))%%#@@&@@@@&%%%%#" << endl << endl;
 cin >> Location;
 if (Location == 1)
 {
@@ -251,78 +251,78 @@ else if (Location == 3)
 	Sleep(500);
 	system("CLS");
 	Sleep(500);
-	cout << "\n,,,,,,,,***,,,,,****,*************************,,*********.,..,,,.,*******,**,**,***,,****************,,,****,*,,,,........ .  .**,.*"; Sleep(120);
-	cout << "\n,*,.,.,,**,*,,.,***********,**********,***/*,*,,*********,...,,,,,*******,*****,**,,,*****/*******,***,,,*****,,.....,..      /,/,. "; Sleep(120);
-	cout << "\n,,..,,*,,,,,,,,.,,,*,,**,************,*********,,*********....,..,*******,****,,**,,,,************,***,.,,****,,,.,,...  ... ,,(,,. "; Sleep(120);
-	cout << "\n,,. ..,,,,,,,,,...,,,,******,*,*(@@@@(,*******,,,*********...,..,.*******,****,,,*,,,,************,**,,,,,,***,,.... ... .  ,,*,,,.."; Sleep(120);
-	cout << "\n. .......,,,,,,,.....*,*,**,@@@@@@@@@@@@%*#@@@@@*,*@@@@@@@*.&@@@@@/,,@@@@@@@@@@,,*,@@@@@@@@%**@@@@@@@@,,,@@@@@@@@@@@@...   .,,*,,..,"; Sleep(120);
-	cout << "\n,....,...,,,,,,,,. ..,,,,,*@@@@@**@@@@@@**@@@@@@,,@@@@@@@*,@@@@@@,**@@@@@@@@@@,,,,@@@@@@@@@,*@@@@@@@@,,,@@@@@@..@@@@@....   ,,,,,,.."; Sleep(120);
-	cout << "\n.,. ..,,,,,,,,,,,  .......@@@@@@,*///*/,*@@@@@@,*@@@@@@@@,@@@@@@.,*@@@@@*@@@@@.,.#@@@@@@@@#(@@@@@@@@#,,@@@@@@..@@@@@....  .  .,,,.,."; Sleep(120);
-	cout << "\n,,,.,,,,,,,,,,,,.  ..... *@@@@@@@@&,,.,,,@@@@@*(@@@@@@@@,@@@@@@..*@@@@@,@@@@@%..(@@@@@@@@@@@@@@@@@@&,,@@@@@@..@@@@@,...    . ......."; Sleep(120);
-	cout << "\n,.,.,,.,,,.,,,.      .  .,,@@@@@@@@@@.,,@@@@@@@@@@@@@@@,@@@@@@..#@@@@@,#@@@@@,.,@@@@@.@@@@@@@&@@@@@,,@@@@@@@@@@@@@.....   .........."; Sleep(120);
-	cout << "\n,.,.,,,,,,,,.  .      ..,,,,,,@@@@@@@,,,@@@@@@@@@@%@@@@@@@@@@..&@@@@@,,@@@@@(,.@@@@@,@@@@@@%#@@@@@..%@@@@@%.,,..,........ .........,"; Sleep(120);
-	cout << "\n....,..,,.,..   .... .#@@@@@,,#@@@@@/.,@@@@@@@@@*,@@@@@@@@@(,.@@@@@@@@@@@@@@.,@@@@@,.@@@@@**@@@@@../@@@@@@........  .............,.,"; Sleep(120);
-	cout << "\n(,,*...,,,...   ....  @@@@@&,@@@@@@*,,*@@@@@@@@..,@@@@@@@@*..@@@@@@,,%@@@@@(,@@@@@(.@@@@@,,@@@@@..*@@@@@@. ...... .................."; Sleep(120);
-	cout << "\n,.....,,,.,,,.     ...%@@@@@@@@@@,,,,,@@@@@@@@...@@@@@@@@...@@@@@@.,,@@@@@@,@@@@@@,,@@@@.,@@@@@,..@@@@@@............................"; Sleep(120);
-	cout << "\n,....**............. .........,.........,,,,...........,.,,,,..,,.,.,,..........................,,............,...........,....,...."; Sleep(120);
-	cout << "\n* /*#*##/,....,...,,.   .,..,.,,,,,,,,.,,,**,,.,.,,,,,,,,,,,,,,,.,.,,.,......,..........,..../&,,...,.........,...,,,.,,.,,,,.,,,,,,"; Sleep(120);
-	cout << "\n((/(##,((((,,,,,,,,,,,,,,,.,,,,,,,,,,,,,,,,,,*,,,,,**,,,,,,,,,,,,,,,,,,,,,,,.,.,,,,,,,,,,,..,..................,.,,,.,,,,,,,,,,,..*."; Sleep(120);
-	cout << "\n#(.#######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.................,./,."; Sleep(120);
-	cout << "\n\n\nClick anything to continue///";
+	std::cout << "\n,,,,,,,,***,,,,,****,*************************,,*********.,..,,,.,*******,**,**,***,,****************,,,****,*,,,,........ .  .**,.*"; Sleep(120);
+	std::cout << "\n,*,.,.,,**,*,,.,***********,**********,***/*,*,,*********,...,,,,,*******,*****,**,,,*****/*******,***,,,*****,,.....,..      /,/,. "; Sleep(120);
+	std::cout << "\n,,..,,*,,,,,,,,.,,,*,,**,************,*********,,*********....,..,*******,****,,**,,,,************,***,.,,****,,,.,,...  ... ,,(,,. "; Sleep(120);
+	std::cout << "\n,,. ..,,,,,,,,,...,,,,******,*,*(@@@@(,*******,,,*********...,..,.*******,****,,,*,,,,************,**,,,,,,***,,.... ... .  ,,*,,,.."; Sleep(120);
+	std::cout << "\n. .......,,,,,,,.....*,*,**,@@@@@@@@@@@@%*#@@@@@*,*@@@@@@@*.&@@@@@/,,@@@@@@@@@@,,*,@@@@@@@@%**@@@@@@@@,,,@@@@@@@@@@@@...   .,,*,,..,"; Sleep(120);
+	std::cout << "\n,....,...,,,,,,,,. ..,,,,,*@@@@@**@@@@@@**@@@@@@,,@@@@@@@*,@@@@@@,**@@@@@@@@@@,,,,@@@@@@@@@,*@@@@@@@@,,,@@@@@@..@@@@@....   ,,,,,,.."; Sleep(120);
+	std::cout << "\n.,. ..,,,,,,,,,,,  .......@@@@@@,*///*/,*@@@@@@,*@@@@@@@@,@@@@@@.,*@@@@@*@@@@@.,.#@@@@@@@@#(@@@@@@@@#,,@@@@@@..@@@@@....  .  .,,,.,."; Sleep(120);
+	std::cout << "\n,,,.,,,,,,,,,,,,.  ..... *@@@@@@@@&,,.,,,@@@@@*(@@@@@@@@,@@@@@@..*@@@@@,@@@@@%..(@@@@@@@@@@@@@@@@@@&,,@@@@@@..@@@@@,...    . ......."; Sleep(120);
+	std::cout << "\n,.,.,,.,,,.,,,.      .  .,,@@@@@@@@@@.,,@@@@@@@@@@@@@@@,@@@@@@..#@@@@@,#@@@@@,.,@@@@@.@@@@@@@&@@@@@,,@@@@@@@@@@@@@.....   .........."; Sleep(120);
+	std::cout << "\n,.,.,,,,,,,,.  .      ..,,,,,,@@@@@@@,,,@@@@@@@@@@%@@@@@@@@@@..&@@@@@,,@@@@@(,.@@@@@,@@@@@@%#@@@@@..%@@@@@%.,,..,........ .........,"; Sleep(120);
+	std::cout << "\n....,..,,.,..   .... .#@@@@@,,#@@@@@/.,@@@@@@@@@*,@@@@@@@@@(,.@@@@@@@@@@@@@@.,@@@@@,.@@@@@**@@@@@../@@@@@@........  .............,.,"; Sleep(120);
+	std::cout << "\n(,,*...,,,...   ....  @@@@@&,@@@@@@*,,*@@@@@@@@..,@@@@@@@@*..@@@@@@,,%@@@@@(,@@@@@(.@@@@@,,@@@@@..*@@@@@@. ...... .................."; Sleep(120);
+	std::cout << "\n,.....,,,.,,,.     ...%@@@@@@@@@@,,,,,@@@@@@@@...@@@@@@@@...@@@@@@.,,@@@@@@,@@@@@@,,@@@@.,@@@@@,..@@@@@@............................"; Sleep(120);
+	std::cout << "\n,....**............. .........,.........,,,,...........,.,,,,..,,.,.,,..........................,,............,...........,....,...."; Sleep(120);
+	std::cout << "\n* /*#*##/,....,...,,.   .,..,.,,,,,,,,.,,,**,,.,.,,,,,,,,,,,,,,,.,.,,.,......,..........,..../&,,...,.........,...,,,.,,.,,,,.,,,,,,"; Sleep(120);
+	std::cout << "\n((/(##,((((,,,,,,,,,,,,,,,.,,,,,,,,,,,,,,,,,,*,,,,,**,,,,,,,,,,,,,,,,,,,,,,,.,.,,,,,,,,,,,..,..................,.,,,.,,,,,,,,,,,..*."; Sleep(120);
+	std::cout << "\n#(.#######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.................,./,."; Sleep(120);
+	std::cout << "\n\n\nClick anything to continue///";
 	string Loc = "Swamp";
 	_getch();
 }
 else
 {
-	cout << "\nYou didn't pick any option, location changed to Swamp";
+	std::cout << "\nYou didn't pick any option, location changed to Swamp";
 	string Loc = "Swamp";
 }
 system("CLS");
 int spell1;
 int spell2;
-cout << name1 << " Pick your spells!";
+std::cout << name1 << " Pick your spells!";
 Sleep(rand() % 400);
-	cout << "\n\n1 - Expelliarmus - The Disarming Charm"; Sleep(rand() % 300);
-	cout << "\n2 - Avada Kedavra - Really deadly spell"; Sleep(rand() % 300);
-	cout << "\n3 - Expecto Patronum - Protection by love"; Sleep(rand() % 300);
-	cout << "\n4 - Wingardium Leviosa - Floating spell"; Sleep(rand() % 300);
-	cout << "\n5 - Petrificus Totalus - The Full Body-Bind Curse"; Sleep(rand() % 300);
-	cout << "\n6 - Accio - The Summoning Charm"; Sleep(rand() % 300);
-	cout << "\n7 - Sectumsempra - A mystery spell"; Sleep(rand() % 300);
-	cout << "\n8 - Lumos - Makes all your future attacks stronger" << endl << endl; Sleep(rand() % 300);
+std::cout << "\n\n1 - Expelliarmus - The Disarming Charm"; Sleep(rand() % 300);
+std::cout << "\n2 - Avada Kedavra - Really deadly spell"; Sleep(rand() % 300);
+std::cout << "\n3 - Expecto Patronum - Protection by love"; Sleep(rand() % 300);
+std::cout << "\n4 - Wingardium Leviosa - Floating spell"; Sleep(rand() % 300);
+std::cout << "\n5 - Petrificus Totalus - The Full Body-Bind Curse"; Sleep(rand() % 300);
+std::cout << "\n6 - Accio - The Summoning Charm"; Sleep(rand() % 300);
+std::cout << "\n7 - Sectumsempra - A mystery spell"; Sleep(rand() % 300);
+std::cout << "\n8 - Lumos - Makes all your future attacks stronger" << endl << endl; Sleep(rand() % 300);
 	cin >> spell1;
 	Sleep(rand() % 450);
 	if (spell1 == 1)
 	{
-		cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 1!";
+		std::cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 1!";
 	}
 	else if (spell1 == 2)
 	{
-		cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 1!";
+		std::cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 1!";
 	}
 	else if (spell1 == 3)
 	{
-		cout << "\n\nExpecto Patronum - Protection by love was picked by player 1!";
+		std::cout << "\n\nExpecto Patronum - Protection by love was picked by player 1!";
 	}
 	else if (spell1 == 4)
 	{
-		cout << "\n\nWingardium Leviosa - Floating spell was picked by player 1!";
+		std::cout << "\n\nWingardium Leviosa - Floating spell was picked by player 1!";
 	}
 	else if (spell1 == 5)
 	{
-		cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 1!";
+		std::cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 1!";
 	}
 	else if (spell1 == 6)
 	{
-		cout << "\n\nAccio - The Summoning Charm was picked by player 1!";
+		std::cout << "\n\nAccio - The Summoning Charm was picked by player 1!";
 	}
 	else if (spell1 == 7)
 	{
-		cout << "\n\nSectumsempra - A mystery spell was picked by player 1!";
+		std::cout << "\n\nSectumsempra - A mystery spell was picked by player 1!";
 	}
 	else if (spell1 == 8)
 	{
-		cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 1!";
+		std::cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 1!";
 	}
 	else
 	{
@@ -363,122 +363,123 @@ Sleep(rand() % 400);
 	}
 	_getch();
 	system("CLS");
-	cout << name2 << " Pick your spells!";
+	std::cout << name2 << " Pick your spells!";
 	Sleep(rand() % 400);
-	cout << "\n\n1 - Expelliarmus - The Disarming Charm"; Sleep(rand() % 300);
-	cout << "\n2 - Avada Kedavra - Really deadly spell"; Sleep(rand() % 300);
-	cout << "\n3 - Expecto Patronum - Protection by love"; Sleep(rand() % 300);
-	cout << "\n4 - Wingardium Leviosa - Floating spell"; Sleep(rand() % 300);
-	cout << "\n5 - Petrificus Totalus - The Full Body-Bind Curse"; Sleep(rand() % 300);
-	cout << "\n6 - Accio - The Summoning Charm"; Sleep(rand() % 300);
-	cout << "\n7 - Sectumsempra - A mystery spell"; Sleep(rand() % 300);
-	cout << "\n8 - Lumos - Makes all your future attacks stronger" << endl << endl; Sleep(rand() % 300);
+	std::cout << "\n\n1 - Expelliarmus - The Disarming Charm"; Sleep(rand() % 300);
+	std::cout << "\n2 - Avada Kedavra - Really deadly spell"; Sleep(rand() % 300);
+	std::cout << "\n3 - Expecto Patronum - Protection by love"; Sleep(rand() % 300);
+	std::cout << "\n4 - Wingardium Leviosa - Floating spell"; Sleep(rand() % 300);
+	std::cout << "\n5 - Petrificus Totalus - The Full Body-Bind Curse"; Sleep(rand() % 300);
+	std::cout << "\n6 - Accio - The Summoning Charm"; Sleep(rand() % 300);
+	std::cout << "\n7 - Sectumsempra - A mystery spell"; Sleep(rand() % 300);
+	std::cout << "\n8 - Lumos - Makes all your future attacks stronger" << endl << endl; Sleep(rand() % 300);
 	cin >> spell2;
 	Sleep(rand() % 450);
 	if (spell2 == 1)
 	{
-		cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 2!";
+		std::cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 2!";
 	}
 	else if (spell2 == 2)
 	{
-		cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 2!";
+		std::cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 2!";
 	}
 	else if (spell2 == 3)
 	{
-		cout << "\n\nExpecto Patronum - Protection by love was picked by player 2!";
+		std::cout << "\n\nExpecto Patronum - Protection by love was picked by player 2!";
 	}
 	else if (spell2 == 4)
 	{
-		cout << "\n\nWingardium Leviosa - Floating spell was picked by player 2!";
+		std::cout << "\n\nWingardium Leviosa - Floating spell was picked by player 2!";
 	}
 	else if (spell2 == 5)
 	{
-		cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 2!";
+		std::cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 2!";
 	}
 	else if (spell2 == 6)
 	{
-		cout << "\n\nAccio - The Summoning Charm was picked by player 2!";
+		std::cout << "\n\nAccio - The Summoning Charm was picked by player 2!";
 	}
 	else if (spell2 == 7)
 	{
-		cout << "\n\nSectumsempra - A mystery spell was picked by player 2!";
+		std::cout << "\n\nSectumsempra - A mystery spell was picked by player 2!";
 	}
 	else if (spell2 == 8)
 	{
-		cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 2!";
+		std::cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 2!";
 	}
 	else
 	{
-		cout << "\n\nWrong number, spell was picked randomly!";
+		std::cout << "\n\nWrong number, spell was picked randomly!";
 		spell2 = rand() % 8;
 		if (spell2 == 1)
 		{
-			cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 2!";
+			std::cout << "\n\nExpelliarmus - The Disarming Charm was picked by player 2!";
 		}
 		else if (spell2 == 2)
 		{
-			cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 2!";
+			std::cout << "\n\nAvada Kedavra - Really deadly spell was picked by player 2!";
 		}
 		else if (spell2 == 3)
 		{
-			cout << "\n\nExpecto Patronum - Protection by love was picked by player 2!";
+			std::cout << "\n\nExpecto Patronum - Protection by love was picked by player 2!";
 		}
 		else if (spell2 == 4)
 		{
-			cout << "\n\nWingardium Leviosa - Floating spell was picked by player 2!";
+			std::cout << "\n\nWingardium Leviosa - Floating spell was picked by player 2!";
 		}
 		else if (spell2 == 5)
 		{
-			cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 2!";
+			std::cout << "\n\nPetrificus Totalus - The Full Body-Bind Curse was picked by player 2!";
 		}
 		else if (spell2 == 6)
 		{
-			cout << "\n\nAccio - The Summoning Charm was picked by player 2!";
+			std::cout << "\n\nAccio - The Summoning Charm was picked by player 2!";
 		}
 		else if (spell2 == 7)
 		{
-			cout << "\n\nSectumsempra - A mystery spell was picked by player 2!";
+			std::cout << "\n\nSectumsempra - A mystery spell was picked by player 2!";
 		}
 		else if (spell2 == 8)
 		{
-			cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 2!";
+			std::cout << "\n\nLumos - Makes all your future attacks stronger was picked by player 2!";
 		}
 	}
 	_getch();
 	system("CLS");
-	int Randy;
-	int HP1, HP2;
-	int PR1, PR2;
+	int Randy, POGGERS = 0;
+	int HP1 = 255, HP2 = 255;
+	int PR1 = 0, PR2 = 0;
 	int atA, atB, atC, at1, at2, at3;
-	int Expecto1, Expecto2, Lumos1, Lumos2;
+	int Expecto1 = 0, Expecto2 = 0, Lumos1 = 0, Lumos2 = 0;
 	int turn = 1;
 	int fight1, fight2;
 	while (HP1 >= 1 && HP2 >= 1)
 	{
 		if (turn == 1)
 		{
+			POGGERS = 0;
 			system("CLS");
 			PR1 = 0;
 			PR1 = Expecto1;
-			cout << name1 << " HP is " << HP1 << endl;
-			cout << name2 << " HP is " << HP2 << endl;
-			cout << name1 << " turn!";
-			cout << "\n\nWhat you want to do?";
-			cout << "\n1 - Attack";
-			cout << "\n2 - Defend";
-			cout << "\n3 - Use magic skill" << endl << endl;
+			std::cout << name1 << " HP is " << HP1 << endl;
+			std::cout << name2 << " HP is " << HP2 << endl;
+			std::cout << name1 << " turn!";
+			std::cout << "\n\nWhat you want to do?";
+			std::cout << "\n1 - Attack";
+			std::cout << "\n2 - Defend";
+			std::cout << "\n3 - Use magic skill" << endl << endl;
 			cin >> fight1;
 			system("CLS");
 			if (fight1 == 1)
 			{
-				cout << name1 << " attacks " << name2 << "!";
+				std::cout << name1 << " attacks " << name2 << "!";
 				atA = rand() % 10 + Lumos1 - PR2 / 13;
 				atB = rand() % 10 + Lumos1 - PR2 / 13;
 				atC = rand() % 10 + Lumos1 - PR2 / 13;
-				cout << "\n" << "First attack - " << atA << " damage!";
-				cout << "\n" << "Second attack - " << atB << " damage!";
-				cout << "\n" << "Third attack - " << atC << " damage!";
-				cout << "\n\n" << name1 << " have done " << atA + atB + atC << " damage!";
+				std::cout << "\n" << "First attack - " << atA << " damage!";
+				std::cout << "\n" << "Second attack - " << atB << " damage!";
+				std::cout << "\n" << "Third attack - " << atC << " damage!";
+				std::cout << "\n\n" << name1 << " have done " << atA + atB + atC << " damage!";
 				HP2 -= atA + atB + atC;
 
 			}
@@ -492,81 +493,424 @@ Sleep(rand() % 400);
 			{
 				if (spell1 == 1)
 				{
-					cout << "\nExpelliarmus - The Disarming Charm!";
+					std::cout << "\nExpelliarmus - The Disarming Charm!";
 					Randy = rand() % 3;
 					if (Randy == 1)
 					{
-						cout << "\n\nMagic wand have fallen out of " << name2 << " hand! He can't attack for next turn!";
-						cout << "\nAlso you done 10 damage to enemie!";
+						std::cout << "\n\nMagic wand have fallen out of " << name2 << " hand! He can't attack for next turn!";
+						std::cout << "\nAlso you done 10 damage to enemie!";
 						HP2 -= 10;
-						///add more details///
+						POGGERS = -1;
 					}
 					else
 					{
-						cout << "\nYou've missed!";
-						cout << "\nBut also you done 5 damage to enemie!";
+						std::cout << "\nYou've missed!";
+						std::cout << "\nBut also you done 5 damage to enemie!";
 						HP2 -= 5;
 					}
 				}
 				else if (spell1 == 2)
 				{
-					cout << "\nAvada Kedavra - The cursed spell!";
-					///add more details///
+					std::cout << "\nAvada Kedavra - The cursed spell!" << endl;
+					std::cout << name2 << " was cursed! He's next choise will be random!";
+					Randy = rand() % 3;
 				}
 				else if (spell1 == 3)
 				{
-					cout << "\nExpecto Patronum - Permenantly increase your protection!";
+					std::cout << "\nExpecto Patronum - Permenantly increase your protection!";
 					Expecto1 += 5;
-					cout << "\nYour protection was increased by 5! It's " << Expecto1 << " now!";
+					std::cout << "\nYour protection was increased by 5! It's " << Expecto1 << " now!";
 				}
 				else if (spell1 == 4)
 				{
-					cout << "\nWingardium Leviosa - Floating spell!";
-					///add more details///
+					std::cout << "\nWingardium Leviosa - Floating spell!";
+					Expecto2 -= 4;
+					std::cout << "\n" << name2 << " lost his 4 protection forever!";
 				}
 				else if (spell1 == 5)
 				{
-					cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
-					///add more details///
+					std::cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						std::cout << "\n\n" << name2 << " was body-binded! He can't attack for next turn!";
+						std::cout << "\nAlso " << name1 << " healed 10 HP";
+						HP1 += 10;
+						POGGERS = -1;
+					}
+					else
+					{
+						std::cout << "\nYou've missed!";
+						std::cout << "\nBut also you done 5 damage to enemie!";
+						HP2 -= 5;
+					}
 				}
 				else if (spell1 == 6)
 				{
-					cout << "\nAccio - The Summoning Charm!";
-					///add more details///
+					std::cout << "\nAccio - The Summoning Charm!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						std::cout << "\n\nYou've spawned Griffon to fight!";
+						std::cout << "\nGriffon attacked " << name2 << " ignorings its protection!";
+						std::cout << "\nGriffon did 30 damage!";
+						HP2 -= 30;
+					}
+					else if (Randy == 2)
+					{
+						std::cout << "\n\nYou've spawned Unicorn to fight!";
+						std::cout << "\nUnicorn attacked " << name2 << " ignorings its protection!";
+						std::cout << "\nUnicorn did 20 damage!";
+						HP2 -= 30;
+					}
+					else
+					{
+						std::cout << "\n\nYou've spawned Snake to fight!";
+						std::cout << "\nSnake attacked " << name2 << " ignorings its protection!";
+						std::cout << "\nSnake did 10 damage!";
+						HP2 -= 30;
+					}
 				}
 				else if (spell1 == 7)
 				{
-					cout << "\nSectumsempra - A mystery spell!";
-					Randy = rand() % 8;
-					///add more details///
+					std::cout << "\nSectumsempra - A mystery spell!";
+					spell1 = rand() % 8;
+					if (spell1 == 1)
+					{
+						std::cout << "\nExpelliarmus - The Disarming Charm!";
+						Randy = rand() % 3;
+						if (Randy == 1)
+						{
+							std::cout << "\n\nMagic wand have fallen out of " << name2 << " hand! He can't attack for next turn!";
+							std::cout << "\nAlso you done 10 damage to enemie!";
+							HP1 -= 10;
+							POGGERS = 1;
+						}
+						else
+						{
+							std::cout << "\nYou've missed!";
+							std::cout << "\nBut also you done 5 damage to enemie!";
+							HP1 -= 5;
+						}
+					}
+					else if (spell1 == 2)
+					{
+						std::cout << "\nAvada Kedavra - The cursed spell!" << endl;
+						std::cout << name2 << " was cursed! He's next choise will be random!";
+						Randy = rand() % 3;
+                        ///
+					}
+					else if (spell1 == 3)
+					{
+						std::cout << "\nExpecto Patronum - Permenantly increase your protection!";
+						Expecto2 += 5;
+						std::cout << "\nYour protection was increased by 5! It's " << Expecto1 << " now!";
+					}
+					else if (spell1 == 4)
+					{
+						std::cout << "\nWingardium Leviosa - Floating spell!";
+						Expecto1 -= 4;
+						std::cout << "\n" << name2 << " lost his 4 protection forever!";
+					}
+					else if (spell1 == 5)
+					{
+						std::cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
+						Randy = rand() % 3;
+						if (Randy == 1)
+						{
+							std::cout << "\n\n" << name2 << " was body-binded! He can't attack for next turn!";
+							std::cout << "\nAlso " << name1 << " healed 10 HP";
+							HP1 += 10;
+							POGGERS = -1;
+						}
+						else
+						{
+							std::cout << "\nYou've missed!";
+							std::cout << "\nBut also you done 5 damage to enemie!";
+							HP2 -= 5;
+						}
+					}
+					else if (spell2 == 6)
+					{
+						std::cout << "\nAccio - The Summoning Charm!";
+						Randy = rand() % 3;
+						if (Randy == 1)
+						{
+							std::cout << "\n\nYou've spawned Griffon to fight!";
+							std::cout << "\nGriffon attacked " << name2 << " ignorings its protection!";
+							std::cout << "\nGriffon did 30 damage!";
+							HP2 -= 30;
+						}
+						else if (Randy == 2)
+						{
+							std::cout << "\n\nYou've spawned Unicorn to fight!";
+							std::cout << "\nUnicorn attacked " << name2 << " ignorings its protection!";
+							std::cout << "\nUnicorn did 20 damage!";
+							HP2 -= 30;
+						}
+						else
+						{
+							std::cout << "\n\nYou've spawned Snake to fight!";
+							std::cout << "\nSnake attacked " << name2 << " ignorings its protection!";
+							std::cout << "\nSnake did 10 damage!";
+							HP2 -= 30;
+						}
+					}
+					else if (spell2 == 7)
+					{
+						std::cout << "\nSectumsempra - A mystery spell!";
+						spell1 = rand() % 8;
+						///add more details///
+					}
+					else if (spell2 == 8)
+					{
+						std::cout << "\nLumos - Makes all your future attacks stronger!";
+						Lumos1 += 3;
+						std::cout << "Your attack was increased by 3! It's " << Lumos1 << " now!";
+					}
 				}
-				else if (spell1 == 8)
+				else if (spell2 == 8)
 				{
-					cout << "\nLumos - Makes all your future attacks stronger!";
+					std::cout << "\nLumos - Makes all your future attacks stronger!";
 					Lumos1 += 3;
-					cout << "Your attack was increased by 3! It's " << Lumos1 << " now!";
+					std::cout << "Your attack was increased by 3! It's " << Lumos1 << " now!";
 				}
 			}
 			else
 			{
-				cout << name1 << "skipped turn! What a disapointment...";
+			std::cout << name1 << "skipped turn! What a disapointment...";
 			}
-			turn = 2;
+			turn = 2 + POGGERS;
 			_getch();
 		}
 		else if (turn == 2)
 		{
-			cout << name1 << " HP is " << HP1 << endl;
-			cout << name2 << " HP is " << HP2 << endl;
-			cout << name2 << " turn!";
-			cout << "\n\nWhat you want to do?";
-			cout << "1 - Attack";
-			cout << "2 - Defend";
-			cout << "3 - Use magic skill";
-			cin >> fight2;
-			_getch();
+		POGGERS = 0;
+		system("CLS");
+		PR2 = 0;
+		PR2 = Expecto1;
+		std::cout << name1 << " HP is " << HP1 << endl;
+		std::cout << name2 << " HP is " << HP2 << endl;
+		std::cout << name2 << " turn!";
+		std::cout << "\n\nWhat you want to do?";
+		std::cout << "\n1 - Attack";
+		std::cout << "\n2 - Defend";
+		std::cout << "\n3 - Use magic skill" << endl << endl;
+		cin >> fight2;
+		system("CLS");
+		if (fight2 == 1)
+		{
+			std::cout << name2 << " attacks " << name1 << "!";
+			at1 = rand() % 10 + Lumos2 - PR1 / 13;
+			at2 = rand() % 10 + Lumos2 - PR1 / 13;
+			at3 = rand() % 10 + Lumos2 - PR1 / 13;
+			std::cout << "\n" << "First attack - " << at1 << " damage!";
+			std::cout << "\n" << "Second attack - " << at2 << " damage!";
+			std::cout << "\n" << "Third attack - " << at3 << " damage!";
+			std::cout << "\n\n" << name1 << " have done " << at1 + at2 + at3 << " damage!";
+			HP1 -= at1 + at2 + at3;
+
+		}
+		else if (fight2 == 2)
+		{
+			cout << name1 << " protects himself!" << endl;
+			PR2 = rand() % 100;
+			cout << name1 << "Protects himself for " << PR1 << " points!";
+		}
+		else if (fight2 == 3)
+		{
+			if (spell2 == 1)
+			{
+				std::cout << "\nExpelliarmus - The Disarming Charm!";
+				Randy = rand() % 3;
+				if (Randy == 1)
+				{
+					std::cout << "\n\nMagic wand have fallen out of " << name1 << " hand! He can't attack for next turn!";
+					std::cout << "\nAlso you done 10 damage to enemie!";
+					HP1 -= 10;
+					POGGERS = 1;
+				}
+				else
+				{
+					std::cout << "\nYou've missed!";
+					std::cout << "\nBut also you done 5 damage to enemie!";
+					HP1 -= 5;
+				}
+			}
+			else if (spell2 == 2)
+			{
+				std::cout << "\nAvada Kedavra - The cursed spell!" << endl;
+				std::cout << name1 << " was cursed! He's next choise will be random!";
+				Randy = rand() % 3;
+			}
+			else if (spell2 == 3)
+			{
+				std::cout << "\nExpecto Patronum - Permenantly increase your protection!";
+				Expecto2 += 5;
+				std::cout << "\nYour protection was increased by 5! It's " << Expecto2 << " now!";
+			}
+			else if (spell2 == 4)
+			{
+				std::cout << "\nWingardium Leviosa - Floating spell!";
+				Expecto1 -= 4;
+				std::cout << "\n" << name1 << " lost his 4 protection forever!";
+			}
+			else if (spell2 == 5)
+			{
+				std::cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
+				Randy = rand() % 3;
+				if (Randy == 1)
+				{
+					std::cout << "\n\n" << name1 << " was body-binded! He can't attack for next turn!";
+					std::cout << "\nAlso " << name2 << " healed 10 HP";
+					HP2 += 10;
+					POGGERS = 1;
+				}
+				else
+				{
+					std::cout << "\nYou've missed!";
+					std::cout << "\nBut also you done 5 damage to enemie!";
+					HP1 -= 5;
+				}
+			}
+			else if (spell2 == 6)
+			{
+				std::cout << "\nAccio - The Summoning Charm!";
+				Randy = rand() % 3;
+				if (Randy == 1)
+				{
+					std::cout << "\n\nYou've spawned Griffon to fight!";
+					std::cout << "\nGriffon attacked " << name1 << " ignorings its protection!";
+					std::cout << "\nGriffon did 30 damage!";
+					HP1 -= 30;
+				}
+				else if (Randy == 2)
+				{
+					std::cout << "\n\nYou've spawned Unicorn to fight!";
+					std::cout << "\nUnicorn attacked " << name1 << " ignorings its protection!";
+					std::cout << "\nUnicorn did 20 damage!";
+					HP1 -= 30;
+				}
+				else
+				{
+					std::cout << "\n\nYou've spawned Snake to fight!";
+					std::cout << "\nSnake attacked " << name1 << " ignorings its protection!";
+					std::cout << "\nSnake did 10 damage!";
+					HP1 -= 30;
+				}
+			}
+			else if (spell2 == 7)
+			{
+				std::cout << "\nSectumsempra - A mystery spell!";
+				spell2 = rand() % 8;
+				if (spell2 == 1)
+				{
+					std::cout << "\nExpelliarmus - The Disarming Charm!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						std::cout << "\n\nMagic wand have fallen out of " << name1 << " hand! He can't attack for next turn!";
+						std::cout << "\nAlso you done 10 damage to enemie!";
+						HP1 -= 10;
+						POGGERS = 1;
+					}
+					else
+					{
+						std::cout << "\nYou've missed!";
+						std::cout << "\nBut also you done 5 damage to enemie!";
+						HP1 -= 5;
+					}
+				}
+				else if (spell1 == 2)
+				{
+					std::cout << "\nAvada Kedavra - The cursed spell!" << endl;
+					std::cout << name1 << " was cursed! He's next choise will be random!";
+					Randy = rand() % 3;
+					///
+				}
+				else if (spell1 == 3)
+				{
+					std::cout << "\nExpecto Patronum - Permenantly increase your protection!";
+					Expecto2 += 5;
+					std::cout << "\nYour protection was increased by 5! It's " << Expecto2 << " now!";
+				}
+				else if (spell1 == 4)
+				{
+					std::cout << "\nWingardium Leviosa - Floating spell!";
+					Expecto1 -= 4;
+					std::cout << "\n" << name1 << " lost his 4 protection forever!";
+				}
+				else if (spell1 == 5)
+				{
+					std::cout << "\nPetrificus Totalus - The Full Body-Bind Curse!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						std::cout << "\n\n" << name1 << " was body-binded! He can't attack for next turn!";
+						std::cout << "\nAlso " << name2 << " healed 10 HP";
+						HP2 += 10;
+						POGGERS = 1;
+					}
+					else
+					{
+						std::cout << "\nYou've missed!";
+						std::cout << "\nBut also you done 5 damage to enemie!";
+						HP1 -= 5;
+					}
+				}
+				else if (spell2 == 6)
+				{
+					std::cout << "\nAccio - The Summoning Charm!";
+					Randy = rand() % 3;
+					if (Randy == 1)
+					{
+						std::cout << "\n\nYou've spawned Griffon to fight!";
+						std::cout << "\nGriffon attacked " << name1 << " ignorings its protection!";
+						std::cout << "\nGriffon did 30 damage!";
+						HP1 -= 30;
+					}
+					else if (Randy == 2)
+					{
+						std::cout << "\n\nYou've spawned Unicorn to fight!";
+						std::cout << "\nUnicorn attacked " << name1 << " ignorings its protection!";
+						std::cout << "\nUnicorn did 20 damage!";
+						HP1 -= 20;
+					}
+					else
+					{
+						std::cout << "\n\nYou've spawned Snake to fight!";
+						std::cout << "\nSnake attacked " << name1 << " ignorings its protection!";
+						std::cout << "\nSnake did 10 damage!";
+						HP1 -= 10;
+					}
+				}
+				else if (spell2 == 7)
+				{
+					std::cout << "\nSectumsempra - A mystery spell!";
+					spell1 = rand() % 8;
+					///add more details///
+				}
+				else if (spell2 == 8)
+				{
+					std::cout << "\nLumos - Makes all your future attacks stronger!";
+					Lumos2 += 3;
+					std::cout << "Your attack was increased by 3! It's " << Lumos2 << " now!";
+				}
+			}
+			else if (spell2 == 8)
+			{
+				std::cout << "\nLumos - Makes all your future attacks stronger!";
+				Lumos2 += 3;
+				std::cout << "Your attack was increased by 3! It's " << Lumos2 << " now!";
+			}
+		}
+		else
+		{
+			std::cout << name2 << "skipped turn! What a disapointment...";
+		}
+		turn = 2 + POGGERS;
+		_getch();
 		}
     }
-
 return 0;
 }
