@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iostream>
 #include <fstream>
 using namespace std;
 
@@ -163,7 +162,7 @@ int main()
 			cout << "\Set Poket telelphone number ";
 			cin >> d;
 			cout << "\Set Extra info ";
-			cin >> e;
+			cin >> e;ww
 		}
 		else if (opt == 2)
 		{
@@ -178,7 +177,7 @@ int main()
 		}
 		else if (opt == 3)
 		{
-			Point* p_1 = new Point(a, b, c, d, e);
+			Point* p_1 = new Point(a, b, c, d, e); //I have no idea how to use string in this sutiation, nor I can find info how to fix it
 			print_poitn(p_1);
 			delete p_1;
 			p_1 = nullptr;
