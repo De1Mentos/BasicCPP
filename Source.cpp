@@ -34,8 +34,6 @@ private:
     int grade;
 };
 
-
-
 int main()
 {
 	return 0;
