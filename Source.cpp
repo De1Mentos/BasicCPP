@@ -1,81 +1,42 @@
 #include <iostream>
 
-template<class T>
-class Student
-{
-	T* m_cat;
+class Student {
 public:
-	Student(T* cat = nullptr)
-		:m_cat(cat)
-	{
-	}
+    Student() 
+    {
+        name = "";
+        age = 0;
+        grade = 0;
+    }
 
-	~Student()
-	{
-		delete m_cat;
-	}
+    Student(std::string name, int age, int grade) {
+        this->name = name;
+        this->age = age;
+        this->grade = grade;
+    }
 
-	Student(const Student& x)
-	{
-		m_cat = new T;
-		*m_cat = *x.m_cat;
-	}
+    Student(Student&& other) {
+        name = std::move(other.name);
+        age = std::move(other.age);
+        grade = std::move(other.grade);
+        other.name = "";
+        other.age = 0;
+        other.grade = 0;
+    }
 
-	Student(Student& x)
-		: m_cat(x.m_cat)
-	{
-		x.m_cat = nullptr; 
-	}
+    ~Student() 
+    {
+    }
 
-	Student& operator=(const Student&& x)
-	{
-		if (&x == this)
-			return *this;
-
-		delete m_cat;
-
-		m_cat = new T;
-		*m_cat = *x.m_cat;
-
-		return *this;
-	}
-	Student& operator=(Student&& x)
-	{
-		if (&x == this)
-			return *this;
-
-		delete m_cat;
-
-		m_cat = x.m_cat;
-		x.m_cat = nullptr;
-
-		return *this;
-	}
-
-	T& operator*() const { return *m_cat; }
-	T* operator->() const { return m_cat; }
-	bool isNull() const { return m_cat == nullptr; }
+private:
+    std::string name;
+    int age;
+    int grade;
 };
-
-class Item
-{
-public:
-	Item() { std::cout << "Item acquired\n"; }
-	~Item() { std::cout << "Item destroyed\n"; }
-};
-
-Student<Item> generateItem()
-{
-	Student<Item> item(new Item);
-	return item; 
-}
 
 
 
 int main()
 {
-	Student<Item> mainItem;
-	mainItem = generateItem();
-
 	return 0;
 }
