@@ -54,7 +54,6 @@ char* mystrrev(char* str) {
 }
 
 int main() {
-    // Пример использования функций
     const char* str1 = "Jesus";
     const char* str2 = "Crust";
     int cmpResult = mystrcmp(str1, str2);
